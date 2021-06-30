@@ -23,8 +23,8 @@ const Todos = new Schema({
     type: String,
     required: true,
   },
-  todos: {
-    type: [Todo],
+  todo: {
+    type: Todo,
     require: false,
   },
 });

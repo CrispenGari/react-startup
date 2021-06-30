@@ -4,7 +4,7 @@ import cors from "cors";
 import "./db";
 import bcrypt from "bcryptjs";
 import { Todos, Users } from "./db";
-import { IUser } from "./types";
+import { IUser, ITodo } from "./types";
 dotenv.config();
 
 const PORT = 3001 || process.env.PORT;
@@ -24,17 +24,85 @@ app.get("/", (req: express.Request, res: express.Response) => {
   });
 });
 
-app.get("/todos/:username", (req: express.Request, res: express.Response) => {
-  const { username } = req.params;
-  res.status(200).json({
-    code: 200,
-    message: username,
-  });
+app.get(
+  "/todos/:username",
+  async (req: express.Request, res: express.Response) => {
+    const { username } = req.params;
+    await Todos.find({ username: username }, (error: Error, doc: ITodo) => {
+      if (error) {
+        return res.status(500).json({
+          code: 500,
+          message: "Internal server error",
+        });
+      }
+      return res.status(200).json(doc);
+    });
+  }
+);
+
+app.put("/todo/update", async (req: express.Request, res: express.Response) => {
+  const { id, title, completed } = req.body;
+  await Todos.findByIdAndUpdate(id, {
+    todo: {
+      title: title,
+      completed: completed,
+    },
+  })
+    .then((doc) => {
+      return res.status(204).send(doc);
+    })
+    .catch((error: Error) => {
+      return res.status(500).json({
+        code: 500,
+        message: "Internal server error",
+      });
+    });
 });
 
-app.post("/todo/create", (req: express.Request, res: express.Response) => {
-  const { username, title, completed } = req.body;
-});
+app.delete(
+  "/todo/delete/:id",
+  async (req: express.Request, res: express.Response) => {
+    const { id } = req.params;
+    await Todos.findByIdAndDelete(id)
+      .then(() => {
+        return res.status(204).json({
+          code: 204,
+          message: "Deleted.",
+        });
+      })
+      .catch((error: Error) => {
+        return res.status(500).json({
+          code: 500,
+          message: "Internal server error",
+        });
+      });
+  }
+);
+
+app.post(
+  "/todo/create",
+  async (req: express.Request, res: express.Response) => {
+    const { username, title, completed } = req.body;
+    await Todos.create(
+      {
+        username: username,
+        todo: {
+          title: title,
+          completed: completed,
+        },
+      },
+      (error: Error, doc: ITodo) => {
+        if (error) {
+          return res.status(500).json({
+            code: 500,
+            message: "Internal server error",
+          });
+        }
+        return res.status(201).json(doc);
+      }
+    );
+  }
+);
 
 app.post("/user/login", async (req: express.Request, res: express.Response) => {
   const { username, password } = await req.body;
@@ -72,12 +140,10 @@ app.post("/user/login", async (req: express.Request, res: express.Response) => {
     }
   });
 });
-
 app.post(
   "/user/create",
   async (req: express.Request, res: express.Response) => {
     const { username, password } = await req.body;
-
     await Users.findOne({ username: username }, (error: Error, doc: IUser) => {
       if (error) {
         return res.status(500).json({
@@ -105,7 +171,7 @@ app.post(
             message: "Internal server error",
           });
         }
-        return res.status(200).json(doc);
+        return res.status(201).json(doc);
       }
     );
   }
