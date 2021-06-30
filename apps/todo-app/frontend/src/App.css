@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.app__container {
+  padding: 0px 10px !important;
+  width: 100%;
+  margin: 20px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.app__login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  user-select: none;
+}
+.app__login__container {
+  width: 100%;
+  background-color: white;
+  max-width: 600px;
+  box-shadow: 2px 2px 2px 2px lightblue;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.app__login__container h1 {
+  font-size: 20px;
+  width: fit-content;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  font-weight: 500;
+  margin: 10px auto;
+  background-image: linear-gradient(to right, green, red, lightseagreen);
+  background-clip: text;
+  color: transparent;
+}
+.app__login__container input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background: #f5f5f5;
+  margin: 10px 0;
+}
+
+.app__login__container p {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.app__login__container button {
+  background-image: linear-gradient(to right, green, red, lightseagreen);
+  color: white;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.app__login__container button:hover {
+  background-image: linear-gradient(to right, red, lightseagreen, green);
+}
+.app__login__container input:last-of-type {
+  margin: 0;
+  flex: 1;
+  margin-right: 5px;
+}
+.app__login__password__field {
+  width: 100%;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-right: 10px;
+  border: none;
+  background: #f5f5f5;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app__login__password__field__icon {
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+}
