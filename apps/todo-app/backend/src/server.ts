@@ -5,11 +5,28 @@ import "./db";
 import bcrypt from "bcryptjs";
 import { Todos, Users } from "./db";
 import { IUser, ITodo } from "./types";
-dotenv.config();
+import { graphqlHTTP } from "express-graphql";
+import { GraphQLSchema } from "graphql";
+import { RootQueryType, RootMutationType } from "./graphql";
 
+const schema = new GraphQLSchema({
+  description: "THIS IS A GRAPHQL SCHEMA FOR THE TODO APPLICATION.",
+  // mutation: RootMutationType,
+  query: RootQueryType,
+});
+
+dotenv.config();
 const PORT = 3001 || process.env.PORT;
 const app: express.Application = express();
 // Midlewares
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
 app.use(express.json());
 app.use(
   cors({
@@ -18,10 +35,10 @@ app.use(
 );
 
 app.get("/", (req: express.Request, res: express.Response) => {
-  res.status(200).json({
-    code: 200,
-    message: "Todo backend",
-  });
+  res.send(`
+ <h1>Welcome to our TODO Application BACKEND SERVER</h1>
+ <a href='http://localhost:3001/graphql'>GraphQL Interface</a>
+ `);
 });
 
 app.get(
