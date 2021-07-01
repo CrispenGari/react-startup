@@ -118,3 +118,7 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+.app__login__container h1:last-of-type {
+  font-size: 15px;
+  text-transform: none !important;
+}
