@@ -11,7 +11,7 @@ import { RootQueryType, RootMutationType } from "./graphql";
 
 const schema = new GraphQLSchema({
   description: "THIS IS A GRAPHQL SCHEMA FOR THE TODO APPLICATION.",
-  // mutation: RootMutationType,
+  mutation: RootMutationType,
   query: RootQueryType,
 });
 

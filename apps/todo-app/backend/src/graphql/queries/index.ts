@@ -5,9 +5,7 @@ import {
   GraphQLString,
 } from "graphql";
 import { TodoTypeWithUsername } from "../types";
-
 import { Todos } from "../../db";
-
 const RootQueryType = new GraphQLObjectType({
   name: "RootQuery",
   description: "This is the root query type for users and todos.",
