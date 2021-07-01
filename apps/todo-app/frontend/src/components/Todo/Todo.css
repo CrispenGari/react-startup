@@ -8,7 +8,7 @@
   cursor: pointer;
   padding: 10px;
 }
-.todo h1 {
+.todo h2 {
   color: #4e4e4e !important;
   font-size: 16px !important;
   text-transform: capitalize !important;
@@ -16,7 +16,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: line-through;
+  margin-bottom: 10px;
+}
+.todo h2.todo--completed {
+  text-decoration: line-through orange 2px;
 }
 .todo__controls {
   display: flex;
@@ -48,6 +51,10 @@
 }
 .todo__icon__completed {
   color: green;
+}
+.todo__edit small {
+  text-align: center;
+  color: lightseagreen;
 }
 
 .todo__edit {

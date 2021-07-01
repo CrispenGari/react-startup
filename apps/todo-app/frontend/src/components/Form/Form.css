@@ -23,7 +23,10 @@
   background-clip: text;
   color: transparent;
 }
-
+.form small {
+  text-align: center;
+  color: lightseagreen;
+}
 .form button {
   background-image: linear-gradient(to right, green, red, lightseagreen);
   color: white;

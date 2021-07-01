@@ -19,7 +19,7 @@ dotenv.config();
 const PORT = 3001 || process.env.PORT;
 const app: express.Application = express();
 // Midlewares
-
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -28,11 +28,6 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
-);
 
 app.get("/", (req: express.Request, res: express.Response) => {
   res.send(`
@@ -161,15 +156,21 @@ app.post(
   "/user/create",
   async (req: express.Request, res: express.Response) => {
     const { username, password } = await req.body;
+    if (password.length < 6) {
+      return res.status(200).json({
+        code: 200,
+        message: "password must be have at least 6 characters*",
+      });
+    }
     await Users.findOne({ username: username }, (error: Error, doc: IUser) => {
       if (error) {
-        return res.status(500).json({
+        return res.json({
           code: 500,
           message: "Internal server error",
         });
       }
       if (doc) {
-        return res.status(200).json({
+        return res.json({
           code: 200,
           message: "username already taken",
         });
@@ -183,12 +184,12 @@ app.post(
       },
       (error: Error, doc: IUser) => {
         if (error) {
-          return res.status(500).json({
+          return res.json({
             code: 500,
             message: "Internal server error",
           });
         }
-        return res.status(201).json(doc);
+        return res.json(doc);
       }
     );
   }

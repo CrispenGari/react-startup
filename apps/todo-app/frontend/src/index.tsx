@@ -6,7 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 import rootReducers from "./reducers";
 
 import { Provider } from "react-redux";
-import { createStore, compose, applyMiddleware } from "redux";
+import { createStore, compose } from "redux";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  HttpLink,
+} from "@apollo/client";
+
+const httpLink = new HttpLink({ uri: "http://localhost:3001/graphql" });
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
 
 declare global {
   interface Window {
@@ -20,7 +32,9 @@ const store = createStore(rootReducers, composeEnhancers());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
