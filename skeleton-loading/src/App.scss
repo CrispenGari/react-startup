@@ -1,0 +1,28 @@
+@import "colors";
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .app__main {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    flex: 1;
+    max-width: 1000px;
+    margin: 0px auto;
+    .app__main__left {
+      flex: 1;
+      max-width: 400px;
+      margin: 0px auto;
+    }
+  }
+}
+.app::-webkit-scrollbar {
+  display: none;
+}
