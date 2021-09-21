@@ -1,0 +1,33 @@
+.authentication {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 90vh;
+  border: 1px solid green;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px black;
+  padding: 10px;
+}
+.authentication > h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: center;
+}
+.authentication > h1 {
+}
+.authentication__error {
+  text-align: center;
+  color: red;
+}
+.authentication > .MuiSvgIcon-root {
+  font-size: 60px;
+  color: red;
+}
+.authentication__button {
+  text-transform: inherit !important;
+  background-color: green !important;
+  color: white !important;
+  width: 70% !important;
+  font-weight: 300;
+}

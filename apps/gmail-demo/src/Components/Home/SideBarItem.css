@@ -1,0 +1,49 @@
+.sidebarItem {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-top: 8px;
+  align-items: center;
+  border-radius: 50px;
+}
+.sidebarItem:hover {
+  cursor: pointer;
+}
+.sidebarItem__icon {
+  margin-right: 10px;
+  font-size: 18px !important;
+}
+.active {
+  background-color: #fce8e6;
+  /* icon color #fce8e6 */
+}
+.sidebarItem:hover {
+  background-color: #f1f3f4;
+}
+.sidebar__more {
+  margin-left: 10px;
+}
+.sidebar__top {
+  height: 225px;
+  overflow-y: scroll;
+}
+
+.sidebar__top::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sidebar__top::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar__top::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.sidebar__top::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

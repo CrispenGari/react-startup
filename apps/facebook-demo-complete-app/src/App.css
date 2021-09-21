@@ -1,0 +1,17 @@
+body {
+  --main-color: #4267b2;
+  --main-icons-color: #1479f8;
+  --background-color: #e9ebee;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: var(--background-color);
+}
+.app::-webkit-scrollbar {
+  display: none;
+}
+.app__body {
+  display: flex;
+}

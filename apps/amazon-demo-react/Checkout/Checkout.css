@@ -1,0 +1,13 @@
+.checkout {
+  display: flex;
+}
+.checkout__image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.checkout__left {
+  flex: 1;
+}
+.checkout__right {
+  flex: 0;
+}

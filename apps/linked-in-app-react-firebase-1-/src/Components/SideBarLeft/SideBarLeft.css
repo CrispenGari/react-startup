@@ -1,0 +1,111 @@
+.sidebarLeft {
+  flex: 0.2;
+  min-width: 170px;
+}
+.sidebarLeft__infoTop {
+  padding: 10px;
+  background-color: white;
+}
+.sidebarLeft__top {
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: white;
+}
+.sidebarLeft__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebarLeft__infoTop {
+  width: 100%;
+  background-color: rgb(0, 147, 187);
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.sidebarLeft__Avatar {
+  width: 70px !important;
+  height: 70px !important;
+  margin-top: -30px;
+  border: solid white 1px !important;
+  cursor: pointer;
+}
+.sidebarLeft__info > h2 {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sidebarLeft__info > small {
+  color: gray;
+}
+.sidebarLeft__connections {
+  padding: 5px;
+}
+.sidebarLeft__connections > small:hover {
+  text-decoration: underline;
+  color: var(--text-color1);
+}
+.sidebarLeft__connections > small:first-child {
+  color: gray;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebarLeft__connections > small:first-child > .MuiSvgIcon-root {
+  color: var(--text-color2);
+  cursor: pointer;
+  font-size: 18px;
+}
+.access {
+  margin-top: 30px;
+}
+.sidebarLeft__saved {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.sidebarLeft__saved > .MuiSvgIcon-root {
+  color: gray;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.sidebarLeft__bottom {
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: white;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+.sidebarLeft__bottom > small:nth-child(odd) {
+  color: var(--text-color2);
+}
+.sidebarLeft__bottom > small:nth-child(even) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebarLeft__bottom > small:nth-child(even) > .MuiSvgIcon-root {
+  color: gray;
+  cursor: pointer;
+  font-size: 18px;
+}
+.sidebarLeft__bottom > small {
+  padding: 5px;
+  cursor: pointer;
+}
+.sidebarLeft__bottom > small:hover {
+  cursor: pointer;
+  background-color: var(--body-color);
+}
+.sidebarLeft__bottomBottom {
+  text-align: center;
+  padding: 10px;
+}

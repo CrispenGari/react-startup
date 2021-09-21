@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  color: white;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 0 20px 5px 20px;
+}
+.nav > div {
+  width: 150px;
+}
+.nav::-webkit-scrollbar {
+  display: none;
+}

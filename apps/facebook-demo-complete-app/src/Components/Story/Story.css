@@ -1,0 +1,13 @@
+.story {
+  position: relative;
+  margin-right: 8px;
+  width: 500px !important;
+  height: 300px;
+  border-radius: 5px;
+}
+.story__avatar {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 2px solid blue !important;
+}

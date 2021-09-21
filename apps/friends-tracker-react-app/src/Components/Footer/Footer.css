@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: green;
+  color: white;
+  z-index: 1;
+  padding: 0 10px 5px 10px;
+}
+.footer > h2 {
+  font-weight: 200;
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__avatar {
+  margin-left: 10px;
+  cursor: pointer;
+  width: 30px !important;
+  height: 30px !important;
+}
+.footer__users {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+}
+.footer__users::-webkit-scrollbar {
+  display: none;
+}
+.footer__user--active {
+  width: 9px;
+  height: 9px;
+  background-color: black;
+  border-radius: 50%;
+  animation: ripple-effect 1.2s infinite ease-in-out;
+}
+
+@keyframes ripple-effect {
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.09);
+    opacity: 0;
+  }
+}

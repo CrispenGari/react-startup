@@ -1,0 +1,24 @@
+.home {
+  padding: 10px 20px;
+}
+.home__row--items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.home__row--items::-webkit-scrollbar {
+  display: none;
+}
+.home__row {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.home__row > h1 {
+  font-size: 16px;
+  font-weight: 800px;
+}

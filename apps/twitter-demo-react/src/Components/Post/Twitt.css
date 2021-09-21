@@ -1,0 +1,73 @@
+.twitt {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 5px 10px 5px 5px;
+  margin-top: 5px;
+}
+.twitt__retweet {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.twitt__userTweet {
+  display: flex;
+}
+.twitt__usernameTwitContent {
+  padding: 10px;
+}
+.twitt__timeusername {
+  display: flex;
+  align-items: center;
+}
+.twitt__timeusername > span {
+  color: gray;
+  margin-left: 10px;
+}
+.twitt__retweetContent {
+  border: 1px solid lightslategray;
+  width: 80%;
+  border-radius: 5px;
+  margin-left: 50px;
+  padding: 10px;
+}
+.twitt__userContainer {
+  display: flex;
+}
+.twitt__controlls {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.twitt__shareIcon {
+  margin-left: 10px !important;
+}
+.twitt__retweetContentAvatar {
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: 10px;
+}
+.twitt__retweetSmall {
+  color: gray;
+  font-size: 20px !important;
+}
+.twitt__commentIcon,
+.twitt__repeatIcon,
+.twitt__likeIcon,
+.twitt__shareIcon {
+  color: gray;
+  margin-right: 5px;
+}
+.twitt__commentIcon:hover,
+.twitt__repeatIcon:hover,
+.twitt__likeIcon:hover,
+.twitt__shareIcon:hover {
+  cursor: pointer;
+}
+.twitt__repeatIcon {
+  transform: translateX(-50%) rotate(90deg) !important;
+}
+.twitt__buttons {
+  display: flex;
+  justify-content: center;
+}

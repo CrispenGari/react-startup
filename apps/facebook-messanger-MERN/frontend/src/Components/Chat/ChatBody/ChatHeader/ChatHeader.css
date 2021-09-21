@@ -1,0 +1,36 @@
+.chatheader {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  position: sticky;
+  justify-content: space-between;
+  border: 0.25px solid lightgray;
+  box-shadow: 1px 1px 0.3px 0.3px lightgray;
+}
+.chatheader__right {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  justify-content: space-between;
+}
+.chatheader__right > .MuiSvgIcon-root {
+  color: #0099ff !important;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 30px !important;
+}
+.chatheader__left {
+  display: flex;
+  align-items: center;
+}
+.chatheader__leftInfo {
+  margin-left: 10px;
+}
+.chatheader__leftInfo > h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.chatheader__leftInfo > p {
+  font-size: 12px;
+  color: gray;
+}

@@ -1,0 +1,94 @@
+.authentication {
+  width: 100vw;
+  height: 100vh;
+  background-color: white !important;
+}
+
+.authentication__top {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.authentication__signInBtn {
+  text-transform: inherit !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  background-color: var(--text-color2) !important;
+  color: white !important;
+  margin: 20px 10px !important;
+  padding: 15px !important;
+  border-radius: 999px !important;
+}
+.authentication__forgetPBtn {
+  text-transform: inherit !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  background-color: white !important;
+  color: var(--text-color2) !important;
+  margin: 20px 10px !important;
+  border-radius: 999px !important;
+  width: 60% !important;
+  margin: auto !important;
+}
+.authentication__rememberMe {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.authentication__top > p {
+  text-align: center;
+  margin: 10px 0;
+  color: gray;
+}
+.authentication__rememberMe:hover {
+  cursor: pointer;
+}
+.authentication__form > p > span {
+  margin-left: 10px;
+  color: var(--text-color2);
+  font-weight: 600;
+  cursor: pointer;
+}
+.authentication__rememberMe > p > span {
+  margin-left: 10px;
+  color: var(--text-color2);
+  font-weight: 600;
+}
+.authentication__rememberMe > p > span:hover,
+.authentication__form > p > span:hover {
+  text-decoration: underline;
+}
+.authentication__error {
+  color: red;
+  text-align: center;
+  margin: 5px 0;
+}
+.authentication__topLogo {
+  display: flex;
+  align-items: center;
+  color: var(--text-color2);
+}
+.authentication__topLogo > img {
+  width: 30px;
+  margin-left: 5px;
+}
+.authentication__form > p {
+  text-align: center;
+  margin: 15px 0;
+}
+.authentication__top > h1 {
+  margin: 20px 0;
+}
+.authentication__rememberMe > input {
+  margin-right: 20px;
+}
+.authentication__input {
+  margin-top: 15px !important;
+}
+.authentication__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

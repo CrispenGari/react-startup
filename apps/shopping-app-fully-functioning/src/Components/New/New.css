@@ -1,0 +1,14 @@
+.new > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 20px;
+}
+.new > h2 > span:first-child {
+  color: black;
+}
+.new > h2 > span:last-child {
+  font-size: 15px;
+  font-weight: 500;
+}

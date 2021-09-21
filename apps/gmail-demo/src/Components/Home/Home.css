@@ -1,0 +1,9 @@
+.home__sidebarMain {
+  display: flex;
+}
+
+.home__header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

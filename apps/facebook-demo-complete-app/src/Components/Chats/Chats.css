@@ -1,0 +1,31 @@
+.chats {
+  flex: 0.2;
+  max-height: 100vh;
+  padding: 10px;
+  overflow-y: scroll;
+}
+/* width */
+.chats::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.chats::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.chats::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.chats::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.chats_footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}

@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+.header__avatar_:hover {
+  cursor: pointer;
+}
+.header__center {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  background-color: #f1f3f4;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-left: 20px;
+}
+.header__center > input:focus {
+  background-color: white;
+}
+
+.header__center > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f1f3f4;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}

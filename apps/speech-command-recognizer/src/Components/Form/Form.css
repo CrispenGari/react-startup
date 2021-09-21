@@ -1,0 +1,161 @@
+.form {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  user-select: none;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: white;
+}
+.form__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__available__words {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px dashed green;
+  border-radius: 5px;
+  animation: border-animation 2s linear infinite;
+}
+
+.form__switch__label {
+  margin-bottom: 5px !important;
+  color: lightseagreen !important;
+  user-select: none !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+.form__switch {
+  color: lightseagreen !important;
+}
+.form__available__word {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: white;
+  color: green;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase !important;
+}
+.form__available__word--active {
+  background-color: green;
+  color: white;
+}
+.form__top > h1 {
+  margin-bottom: 5px;
+  color: lightseagreen;
+  user-select: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.form__mic--active {
+  color: green !important;
+  font-size: 40px !important;
+}
+.form__mic--disabled {
+  color: orange !important;
+  font-size: 40px !important;
+}
+.form__helper {
+  width: 100%;
+  height: 25vh;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  border: 2px solid green;
+  margin: 10px 0;
+  animation: border-animation-recording 1s infinite linear;
+}
+.form__helper--not-listening {
+  border: 2px dashed orange;
+  width: 100%;
+  height: 25vh;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 5px;
+}
+.form__helper--not-listening > p {
+  font-size: 12px !important;
+  color: gray !important;
+  text-align: center !important;
+}
+
+.form__helper--not-listening > small > .MuiSvgIcon-root {
+  color: orange !important;
+  margin-right: 5px !important;
+}
+.form__helper > small {
+  color: green;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.form__helper > .MuiSvgIcon-root {
+  color: green;
+  font-size: 30px;
+  animation: mic-recording 0.5s infinite linear;
+}
+.form__helper > .MuiSvgIcon-root {
+  transform: scale(1.5);
+}
+
+small.form__warning {
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: none !important;
+  text-transform: inherit !important;
+  font-style: inherit !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+.form__button {
+  cursor: pointer !important;
+  width: 50px !important;
+  height: 50px !important;
+  margin: 20px 0px !important;
+  background-color: lightgray !important;
+  margin: auto !important;
+}
+.form__controls {
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+@keyframes border-animation-recording {
+  from {
+    border: 2px solid green;
+  }
+  to {
+    border: 2px dotted lightseagreen;
+  }
+}
+@keyframes mic-recording {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes border-animation {
+  from {
+    border: 2px dashed green;
+  }
+  to {
+    border: 2px dotted orange;
+  }
+}

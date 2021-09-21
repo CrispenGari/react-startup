@@ -1,0 +1,14 @@
+.createtwit {
+  position: fixed;
+  z-index: 1;
+  top: 75%;
+  right: 20px;
+  color: white;
+  background-color: rgb(29, 161, 242);
+  padding: 15px;
+  z-index: 1;
+  border-radius: 50% !important;
+}
+.createtwit:hover {
+  cursor: pointer;
+}

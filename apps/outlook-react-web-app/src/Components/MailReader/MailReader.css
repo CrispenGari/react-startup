@@ -1,0 +1,85 @@
+.mailreader {
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 70vh;
+  padding-bottom: 20px;
+}
+.mailreader__header {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--body-color);
+  z-index: 10;
+}
+.mailreader__messages {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: -1px -1px 1px 1px var(--body-color);
+  width: 95%;
+  margin: 5px auto;
+  height: 100%;
+}
+.mailreader__messages--top {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.mailreader__messages--top > .MuiSvgIcon-root {
+  color: gray;
+  cursor: pointer;
+}
+.mailreader__messages--top > small {
+  flex: 1;
+  margin-left: 20px;
+}
+.mailreader__mailinfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--body-color);
+}
+.mailreader__center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.mailreader__center > h3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+.mailreader__center > small:nth-child(2) {
+  color: gray;
+}
+.mailreader__avatar {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
+}
+.mailreader__right {
+  display: flex;
+}
+.mailreader__right > .MuiSvgIcon-root {
+  cursor: pointer;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+.mailreader__right > .MuiSvgIcon-root:hover {
+  color: var(--body-color);
+}
+.mailreader__body {
+  padding: 20px;
+}
+.mailreader__bottons {
+  display: flex;
+  padding: 10px;
+}
+.mailreader__btn {
+  text-transform: inherit !important;
+  color: white !important;
+  background-color: var(--main-color) !important;
+  margin-right: 30px !important;
+}

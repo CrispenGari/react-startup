@@ -1,0 +1,51 @@
+.app {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+.app__addchat {
+  position: fixed !important;
+  z-index: 1;
+  bottom: 20px !important;
+  right: 20px !important;
+}
+.app__addchatWrapper {
+  border-radius: 50%;
+  background-color: rgb(42, 209, 102);
+  width: 50px;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  height: 50px;
+}
+.app__addchatIcon {
+  color: white;
+  /* transform: translateX(-50%) rotate(-90deg) !important;
+  transform-origin: left; */
+}
+
+.app__addcalls {
+  position: fixed !important;
+  z-index: 1;
+  bottom: 90px !important;
+  right: 20px !important;
+}
+.app__addcallsWrapper > .MuiSvgIcon-root {
+  color: rgb(37, 84, 86);
+}
+.app__addcallsWrapper {
+  border-radius: 50%;
+  /* box-shadow: -5px 2px 2px -5px black; */
+  background-color: rgb(205, 205, 205);
+  width: 50px;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  height: 50px;
+}

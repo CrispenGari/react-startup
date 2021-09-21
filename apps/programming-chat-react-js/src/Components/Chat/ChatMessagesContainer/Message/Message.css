@@ -1,0 +1,43 @@
+.message {
+  display: flex;
+  width: 70%;
+  min-width: 150px;
+  border: 1px solid gray;
+  padding: 5px;
+  max-width: 500px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.message__avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border: 2px solid var(--main-color);
+}
+.message__textContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 10px;
+  padding-right: 5px;
+}
+.message__textContainer > h2 {
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: 16px;
+}
+.message__textContainer > small {
+  text-transform: inherit;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  color: lightslategray;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.message__textContainer > p {
+  font-size: 12px;
+  min-width: 100%;
+}
+.message__textContainer > small > .MuiSvgIcon-root {
+  color: var(--main-color) !important;
+}

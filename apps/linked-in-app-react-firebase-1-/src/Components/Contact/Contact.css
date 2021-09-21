@@ -1,0 +1,41 @@
+.contact {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.contact__info {
+  flex: 1;
+  margin-left: 10px;
+}
+.contact__Avatar {
+  width: 50px !important;
+  height: 50px !important;
+}
+.contact__info > h3 {
+  font-size: 15px;
+}
+.contact__info > small {
+  color: gray;
+  font-size: 12px;
+}
+.contact__button {
+  display: flex;
+  align-items: center;
+  border: rgb(0, 115, 177) 1px solid;
+  border-radius: 2px;
+  color: var(--text-color2);
+  padding: 0 5px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.contact__button > .MuiSvgIcon-root {
+  font-size: 15px;
+}
+.contact__button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  border: rgb(0, 115, 177) 2px solid;
+}

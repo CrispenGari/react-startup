@@ -1,0 +1,28 @@
+.series__grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+  padding: 5px 20px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+.series__navs {
+  border-bottom: 1px solid orange;
+  padding: 20px 20px 0 20px;
+  display: flex;
+}
+.series__navItem {
+  width: 75px;
+  background-color: #eff1fa;
+  text-align: center;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.series__navItem--active {
+  color: white;
+  background: orange;
+}

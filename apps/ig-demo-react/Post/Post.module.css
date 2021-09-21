@@ -1,0 +1,90 @@
+.container__post {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  border-top: lightgray solid 1px;
+  width: 320px;
+  border-left: lightgray solid 1px;
+  border-right: lightgray solid 1px;
+  border-bottom: lightgray solid 1px;
+  margin-bottom: 20px;
+}
+.post_image {
+  object-fit: contain;
+  width: 320px;
+}
+.poster_user {
+  display: flex;
+  margin: 10px;
+
+  /* This styles centers the target along the y */
+  align-items: center;
+}
+.user_location {
+  margin-left: 10px;
+}
+.username {
+  margin-bottom: 0;
+}
+.post_caption {
+  margin: 10px 5px;
+}
+#caption_main {
+  margin-left: 5px;
+  font-size: small;
+}
+.post_reactions {
+  display: flex;
+  justify-content: space-between;
+}
+.left_icons {
+  display: flex;
+}
+.send_icon {
+  transform: translateX(-50%) rotate(-45deg);
+  transform-origin: center;
+}
+.post_icons_control:hover {
+  cursor: pointer;
+}
+.post_icons_control:first-child {
+  margin-left: 0;
+}
+.post_icons_control {
+  margin-left: 20px;
+}
+.comment_form {
+  display: flex;
+  width: 100%;
+  border-top: 1px lightslategray solid;
+}
+.button_post {
+  border: 1px solid lightslategray;
+  width: 50px;
+  padding: 5px;
+}
+.comment_container {
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+  max-width: 100%;
+  /* Overflowing text will move to the next line */
+  white-space: initial;
+  word-wrap: break-word;
+}
+.button_post {
+  flex: 0;
+  border: none;
+}
+.post_input {
+  flex: 1;
+  width: 100%;
+  padding: 5px;
+  border: none;
+}
+.comment {
+  margin: 2px;
+}
+.comment_count {
+  color: gray;
+  margin-bottom: 5px;
+}

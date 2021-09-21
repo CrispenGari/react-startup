@@ -1,0 +1,11 @@
+body {
+  --main-color: #0078d4;
+  --body-color: #f3f2f1;
+  --select-color: #b3d7f2;
+  --body-color-secondary: #faf9f8;
+  background-color: var(--body-color);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}

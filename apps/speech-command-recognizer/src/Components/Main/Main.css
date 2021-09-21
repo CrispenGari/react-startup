@@ -1,0 +1,10 @@
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.main__alert {
+  width: 100% !important;
+  margin: 8px auto !important;
+  max-width: 500px !important;
+}

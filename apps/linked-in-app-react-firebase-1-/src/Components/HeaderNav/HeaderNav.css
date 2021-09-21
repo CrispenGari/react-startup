@@ -1,0 +1,34 @@
+.headerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  margin: 0px 5px;
+  width: 75px;
+}
+.headerNav > .MuiSvgIcon-root {
+  color: white;
+  font-size: 25px !important;
+  cursor: pointer;
+}
+.headerNav > small {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.headerNav--active {
+  border-bottom: 3px solid white;
+  margin-bottom: -5px;
+  padding-bottom: 5px;
+}
+.headerNavAvatar {
+  cursor: pointer !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.headerNavMenu {
+  padding: 0 !important;
+  margin: 0 !important;
+  align-self: left !important;
+}

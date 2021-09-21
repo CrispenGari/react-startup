@@ -1,0 +1,49 @@
+.login {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.login__container {
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: green 1px 1px 1px 1px;
+  padding: 10px;
+}
+.login__container > h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.login__container > p {
+  font-size: 12px;
+  margin: 20px auto;
+  font-weight: 100;
+  text-align: center;
+  color: lightgray;
+}
+.login__button {
+  display: flex;
+  padding: 10px;
+  margin-top: 20px;
+  align-items: center;
+}
+.login__button:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: black !important;
+  color: white;
+  transition: 1s color ease-out;
+}
+.login__button > h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.login__button .MuiSvgIcon-root {
+  background-color: black !important;
+}

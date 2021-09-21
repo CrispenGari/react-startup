@@ -1,0 +1,22 @@
+.login {
+  background: white;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  height: 100vh;
+  border-radius: 10px;
+}
+.login__FacebookLogo {
+  color: var(--main-color);
+  font-size: 150px !important;
+}
+.login__button {
+  background-color: var(--main-icons-color) !important;
+  text-transform: inherit !important;
+  color: white !important;
+  font-size: 16px;
+  width: 70% !important;
+  font-weight: 800;
+}

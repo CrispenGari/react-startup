@@ -1,0 +1,13 @@
+.chatbody {
+  flex: 0.8;
+  border: 1px solid lightgray;
+  height: 100vh;
+  flex-direction: column;
+}
+.chatbody::-webkit-scrollbar {
+  display: none;
+}
+.chatbody__main {
+  display: flex;
+  flex: 1;
+}

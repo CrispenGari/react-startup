@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+.header__twiterIcon:hover,
+.header__avatar:hover,
+.header__filterIcon:hover {
+  cursor: pointer;
+}
+.header__twiterIcon,
+.header__filterIcon {
+  font-size: 35px !important;
+}
+.header__twiterIcon,
+.header__filterIcon {
+  color: rgb(29, 161, 242) !important;
+}

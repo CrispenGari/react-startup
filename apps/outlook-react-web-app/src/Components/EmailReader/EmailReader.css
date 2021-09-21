@@ -1,0 +1,20 @@
+.emailreader {
+}
+.emailreader__main {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30vh;
+}
+.emailreader__main > img {
+  width: 100px;
+}
+.emailreader__main > h5 {
+  margin-top: 5px;
+}
+
+.emailreader__main > small {
+  color: gray;
+  margin-top: 5px;
+}

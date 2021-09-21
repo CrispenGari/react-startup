@@ -1,0 +1,32 @@
+.story_wrapper {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  margin: 15px auto;
+  padding-bottom: 10px;
+  border-bottom: lightgray 1px solid;
+}
+.story_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.dot_active {
+  color: green;
+  border: 3px solid rgb(96, 218, 96);
+  border-radius: 50%;
+ 
+  /* animation: ripple 1.2s infinite ease-in-out; */
+}
+.story {
+  margin-left: 8px;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}

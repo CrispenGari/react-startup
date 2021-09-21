@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--main-color);
+  color: white;
+  padding: 10px;
+  position: sticky;
+  align-items: center;
+  top: 0;
+  border-bottom: 1px solid lightgray;
+}
+.MuiSvgIcon-root {
+  color: white !important;
+}
+.header__right {
+  display: flex;
+  align-self: center;
+}
+.header__avatar {
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.header__avatarProfile {
+  border: 2px solid lightseagreen !important;
+}
+.header__avatar > .header__Icon {
+  position: absolute;
+  right: 0;
+  font-size: 15px !important;
+}
+.header__avatar:hover,
+.header__Icon:hover {
+  cursor: pointer;
+}
+.header__center {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightslategray;
+  border-radius: 10px;
+  padding: 5px 10px;
+  flex: 1;
+  max-width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.header__searchInput {
+  padding: 5px;
+  margin-right: 5px;
+  border: none;
+  outline: none;
+
+  flex: 1;
+}

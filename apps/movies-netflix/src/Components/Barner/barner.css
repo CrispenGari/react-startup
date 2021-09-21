@@ -1,0 +1,50 @@
+.barner {
+  color: white;
+  object-fit: contain;
+  height: 448px;
+}
+
+.barner_contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 190px;
+}
+.barner_title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+.barner_description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 80px;
+}
+.barner_button {
+  cursor: pointer;
+  color: white;
+  outline: none;
+  /* No borders */
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vh;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.barner_button:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+.barner--fadeBottom {
+  height: 7.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}

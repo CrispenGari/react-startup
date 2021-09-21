@@ -1,0 +1,56 @@
+.poster {
+  border: 1px solid lightgray;
+  padding: 0 5px 5px 5px;
+  background: rgb(245, 246, 247);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.poster > h4 {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(17, 16, 16);
+}
+.poster__fileInput {
+  display: none;
+}
+.poster__input {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 10px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+.poster__input > input {
+  flex: 1;
+  outline: none;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+.poster__bottonLabel {
+}
+.poster__bottons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.poster__botton {
+  text-transform: inherit !important;
+  width: fit-content !important;
+  font-size: 12px !important;
+}
+.poster__bottonperson {
+  color: var(--main-icons-color);
+}
+.poster__bottonphoto {
+  color: green;
+}
+.poster__bottonmore {
+}
+.poster__bottonvidcall {
+  color: purple;
+}

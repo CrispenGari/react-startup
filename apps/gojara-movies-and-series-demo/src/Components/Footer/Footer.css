@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-top: solid 0.5px lightgray;
+  background: #eff1fa;
+  margin-top: 30px;
+}
+.footer > p:first-child {
+  font-size: small;
+  color: #63b8e7;
+}
+.footer > p:last-child {
+  display: flex;
+  font-size: 15px;
+}
+.footer > p:last-child > h3 {
+  margin-right: 10px;
+  color: #77778c;
+}

@@ -1,0 +1,53 @@
+.message {
+  width: 80%;
+  margin: auto;
+}
+.message:last-child {
+  margin-bottom: 100px;
+}
+
+.message_guest_user {
+  width: 70%;
+  background-color: rgb(132, 180, 132);
+  margin-top: 10px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  clear: both;
+}
+.message__conatiner {
+  display: flex;
+}
+.message__usernameTimestamp {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.message__body {
+  flex: 1;
+  color: blue;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.message__status {
+  float: right;
+}
+.message_seen,
+.message_timestamp {
+  color: gray;
+}
+.message___user___me {
+  background-color: rgb(14, 10, 10);
+  color: white;
+  float: right;
+}
+.message___user___me .message__usernameTimestamp .message_username {
+  color: white;
+}
+.message__scroll {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+}

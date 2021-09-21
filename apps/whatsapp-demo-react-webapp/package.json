@@ -1,0 +1,46 @@
+{
+  "name": "whatsapp-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@tarragon/swipeable-tabs": "^0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "firebase": "^7.17.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-responsive-carousel": "^3.2.9",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-swipe-views": "0.0.12",
+    "react-swipeable-tabs": "^2.2.0",
+    "react-swipeable-views": "^0.13.9",
+    "react-tabs": "^3.1.1",
+    "react-truncate": "^2.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

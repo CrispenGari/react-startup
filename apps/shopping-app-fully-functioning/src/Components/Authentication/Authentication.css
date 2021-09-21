@@ -1,0 +1,71 @@
+.authentication {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: radial-gradient(red, blue, yellow, pink, brown, black);
+}
+.authentication > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: -0.5px -0.5px 1px 1px black;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+.authentication > form > input {
+  padding: 5px 5px;
+  font-size: 18px;
+  margin-top: 10px;
+  width: 95%;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  caret-color: blue;
+  background-color: var(--body-color);
+}
+.authentication > form > h1 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.authentication > form > h2 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+.authentication__buttons {
+  display: flex;
+}
+.authentication__button {
+  flex: 1 !important;
+  background: lightseagreen !important;
+  color: white !important;
+  cursor: pointer;
+  margin: 5px !important;
+  text-transform: inherit !important;
+}
+.authentication__error {
+  text-align: center;
+  color: red;
+  margin: 10px 2px;
+}
+.authentication > form > hr {
+  margin: 10px 0;
+}
+.authentication__switch {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.authentication__switch > span {
+  color: lightseagreen;
+}
+.authentication__switch > span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

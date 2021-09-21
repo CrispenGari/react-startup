@@ -1,0 +1,49 @@
+.profile {
+  flex: 0.4;
+  border: 0.25px solid lightgray;
+  height: 93vh;
+}
+.profile__top {
+  text-align: center !important;
+  height: 280px;
+  display: grid;
+  place-items: center;
+  border-bottom: 0.6px solid lightgray;
+}
+
+.profile__top > div > p {
+  color: gray;
+}
+.profile__top > div > h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.profile__topAvatar {
+  width: 100px !important;
+  height: 100px !important;
+}
+.profile__more > h2,
+.profile__privacy > h2 {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: gray;
+}
+.profile__privacy {
+  padding: 10px;
+}
+.profile__more {
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.profile__more > p {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.profile__icon {
+  color: #0099ff !important;
+}

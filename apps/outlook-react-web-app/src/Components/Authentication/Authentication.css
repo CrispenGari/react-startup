@@ -1,0 +1,8 @@
+.authentication {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e9d4cd;
+  display: flex;
+  place-items: center;
+  background-image: radial-gradient(#e9d4cd, #e1e1de, #eae7d2);
+}

@@ -1,0 +1,118 @@
+.post {
+  padding: 8px;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: white;
+}
+.post__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__timestampPublic {
+  font-size: 14px;
+  color: gray;
+  align-items: center;
+  display: flex;
+  word-spacing: 2px;
+}
+.post__timestampPublic > p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.post__timestampPublic > .MuiSvgIcon-root {
+  font-size: 20px !important;
+}
+.post__usernameTime {
+  flex: 1;
+  margin-left: 5px;
+}
+.post__usernameTime > h4 {
+  color: #385898;
+  font-weight: 500;
+  font-size: 16px;
+}
+.post__body {
+  width: 100%;
+  margin: 5px auto;
+  max-height: 230px;
+}
+.post__body > img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+.post__bottom {
+}
+.post__likescomments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.post__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 5px;
+}
+.post__comemtsInput {
+  display: flex;
+}
+.input__field {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  background: #f2f3f5;
+  padding: 5px;
+  border-radius: 20px;
+}
+.input__field > input {
+  flex: 1;
+  outline: none;
+  padding: 5px;
+  margin-right: 5px;
+  background: inherit;
+  border: none;
+}
+.input__fieldIcon {
+  font-size: 20px !important;
+}
+.input__fieldIconButton {
+  width: 20px !important;
+  height: 20px !important;
+}
+.post__comemtsInput > button {
+  display: none;
+}
+.post__commentContainer {
+  padding: 15px;
+}
+.post__comment {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.post__comment > p {
+  background: rgb(242, 243, 245);
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-left: 5px;
+  max-width: 85%;
+}
+.post__comment > p > strong {
+  color: #385898;
+  margin-right: 5px;
+  font-weight: 500;
+  font-size: small;
+}
+.post__commentAvatar {
+  margin-right: 8px;
+  width: 25px !important;
+  height: 25px !important;
+}

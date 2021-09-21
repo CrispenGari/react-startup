@@ -1,0 +1,25 @@
+const wordList = [
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "yes",
+  "no",
+  "up",
+  "down",
+  "left",
+  "right",
+  "stop",
+  "go",
+  "back",
+  "_background_noise_",
+  "_unknown_",
+];
+
+export default wordList;

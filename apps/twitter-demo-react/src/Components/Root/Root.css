@@ -1,0 +1,102 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.root__top {
+  padding: 30px;
+}
+.root__join1 > h4 {
+  margin: 10px 0px 10px 0px;
+}
+.root__logo {
+  font-size: 80px !important;
+  color: rgb(29, 161, 242) !important;
+  margin-bottom: 20px;
+}
+.root__join1 {
+  margin-top: 10px;
+}
+.root__register {
+  background-color: rgb(29, 161, 242);
+  color: white;
+}
+.root__login {
+  background-color: white;
+  color: rgb(29, 161, 242);
+}
+.root__register,
+.root__login {
+  font-size: 18px;
+  border: 1px solid rgb(29, 161, 242);
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  font-weight: bold;
+}
+.root__register:hover,
+.root__login:hover {
+  cursor: pointer;
+}
+.root__join1 {
+  display: flex;
+  flex-direction: column;
+}
+.root__text {
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  color: gray !important;
+  flex-wrap: wrap;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.root__text a {
+  color: gray !important;
+  flex-wrap: wrap;
+  text-decoration: none;
+  font-size: small;
+  margin-left: 10px;
+}
+.root__text a:hover {
+  text-decoration: underline;
+}
+.root__barner {
+  background-color: rgb(113, 201, 248);
+  position: relative;
+  padding: 15px 40px;
+  height: 230px;
+  overflow: hidden;
+  z-index: -1 !important;
+}
+.root__logoBarner {
+  position: absolute;
+  color: rgb(29, 161, 242);
+  z-index: -1 !important;
+  font-size: 350px !important;
+  top: -60px;
+  right: -60px;
+}
+.root__banerIcons {
+  margin-right: 10px;
+  font-size: 30px !important;
+}
+.root__textBarner {
+  color: white;
+  display: flex;
+  z-index: 100 !important;
+  margin-top: 30px;
+}
+.root__join2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 30px;
+}
+.root__registersmall:hover {
+  cursor: pointer;
+}
+.root__registersmall {
+  width: 100px;
+}

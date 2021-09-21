@@ -1,0 +1,46 @@
+.moviecard {
+  margin: 10px;
+  color: white;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 100ms ease-out;
+}
+.moviecard:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.moviecard > img {
+  width: 350px;
+  height: 200px;
+  object-fit: contain;
+}
+.moviecard_info {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.moviecard_info > p,
+.moviecard_infoDescrp {
+  font-size: 15px;
+  font-weight: 100;
+  text-align: start;
+}
+.moviecard_infoDateLikes {
+  display: none;
+  display: flex;
+  align-items: center;
+}
+.moviecard_infoDateLikes > .MuiSvgIcon-root {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.moviecard_infoDateLikes {
+  display: none;
+}
+.moviecard:hover > .moviecard_info .moviecard_infoDateLikes {
+  display: inline-flex;
+}

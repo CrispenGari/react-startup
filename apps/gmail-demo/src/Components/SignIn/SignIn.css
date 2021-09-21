@@ -1,0 +1,142 @@
+.signin {
+  max-width: 500px;
+  width: 99%;
+  margin: auto;
+}
+.signin__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* display: grid; */
+  max-height: 500px;
+  height: 77vh;
+
+  /* place-self: center; */
+  margin-top: 10%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.login__error {
+  color: red;
+  text-align: center;
+}
+.signin__googleName {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px 0 50px;
+}
+.signin__googleName > h1:last-child {
+  font-weight: 400;
+  font-size: 20px;
+}
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+.login__helper {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.signin__firstLastNames,
+.signin__Passwords {
+  display: flex;
+  margin-bottom: 10px;
+}
+.signin__firstName {
+  margin-right: 10px !important;
+}
+.signin__textInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.signin__Input:hover {
+  cursor: pointer;
+}
+.signin__Input {
+  margin-bottom: 20px;
+}
+.signin__hyperLinks {
+  color: #4285f4;
+  font-weight: 500;
+}
+.signin__Input:last-child {
+  margin-bottom: 10px;
+}
+p {
+  padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  #outlined-helperText {
+    width: 100% !important;
+  }
+}
+.signin__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.signin__buttons button:first-child {
+  border: none;
+  color: #4285f4;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+}
+.signin__buttons button:hover {
+  cursor: pointer;
+}
+.signin__buttons button:last-child {
+  border: none;
+  background-color: #4285f4;
+  outline: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.signin__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.signin__helpPrivacyTerms > small {
+  margin-left: 10px;
+}
+.signin__helpPrivacyTerms > small:hover {
+  cursor: pointer;
+}
+.signin__helpPrivacyTerms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 0;
+}
+.signin__footer small:first-child {
+  flex: 1;
+}
+.signin__footer small {
+  color: #5f656b;
+}
+/* Google letters */
+.signin__googleNameLetters span:first-child,
+.signin__googleNameLetters span:nth-child(4) {
+  color: #4285f4;
+}
+.signin__googleNameLetters span:nth-child(2),
+.signin__googleNameLetters span:last-child {
+  color: #ec5547;
+}
+.signin__googleNameLetters span:nth-child(3) {
+  color: #fbbc05;
+}
+.signin__googleNameLetters span:nth-child(5) {
+  color: #34a853;
+}

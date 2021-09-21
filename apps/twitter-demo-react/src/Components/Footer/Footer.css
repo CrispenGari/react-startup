@@ -1,0 +1,25 @@
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  border-top: 1px solid lightgray;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
+  max-width: 700px;
+  background-color: white;
+}
+.footer__activeIcon {
+  color: rgb(29, 161, 242) !important;
+}
+.footer__icons:hover {
+  cursor: pointer;
+}
+.footer__icons {
+  font-size: 30px !important;
+  color: gray;
+}

@@ -1,0 +1,39 @@
+.messageinput {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+}
+.messageinput__top {
+  display: flex;
+}
+.messageinput_input {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.messageinput__iconbtn:hover {
+  background: var(--main-color) !important;
+}
+.messageinput__iconbtn {
+  background: black !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: 5px !important;
+}
+.messageinput__bottom {
+  display: flex;
+  border-top: 1px solid lightgray;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.messageinput__bottomLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.messageinput__bottomRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

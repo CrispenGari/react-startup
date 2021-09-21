@@ -1,0 +1,129 @@
+.useanotherAccount {
+  max-width: 500px;
+  width: 99%;
+  margin: auto;
+}
+.useanotherAccount__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* display: grid; */
+  max-height: 500px;
+  height: 75vh;
+
+  /* place-self: center; */
+  margin-top: 15%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.useanotherAccount__googleName {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.useanotherAccount__googleName > h1:last-child {
+  font-weight: 400;
+  font-size: 20px;
+}
+.useanotherAccount__form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 70px;
+}
+.useanotherAccount__textInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.useanotherAccount__Input:hover {
+  cursor: pointer;
+}
+.useanotherAccount__Input {
+  margin-bottom: 20px;
+}
+.useanotherAccount__hyperLinks {
+  color: #4285f4;
+  font-weight: 500;
+}
+.useanotherAccount__Input:last-child {
+  margin-bottom: 10px;
+}
+p {
+  padding-bottom: 25px;
+}
+#outlined-helperText {
+  /* width: 100% !important; */
+  width: 25vw !important;
+}
+@media only screen and (max-width: 600px) {
+  #outlined-helperText {
+    width: 100% !important;
+  }
+}
+.useanotherAccount__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.useanotherAccount__buttons button:first-child {
+  border: none;
+  color: #4285f4;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+}
+.useanotherAccount__buttons button:hover {
+  cursor: pointer;
+}
+.useanotherAccount__buttons button:last-child {
+  border: none;
+  background-color: #4285f4;
+  outline: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.useanotherAccount__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.useanotherAccount__helpPrivacyTerms > small {
+  margin-left: 10px;
+}
+.useanotherAccount__helpPrivacyTerms > small:hover {
+  cursor: pointer;
+}
+.useanotherAccount__helpPrivacyTerms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 0;
+}
+.useanotherAccount__footer small:first-child {
+  flex: 1;
+}
+.useanotherAccount__footer small {
+  color: #5f656b;
+}
+/* Google letters */
+.useanotherAccount__googleNameLetters span:first-child,
+.useanotherAccount__googleNameLetters span:nth-child(4) {
+  color: #4285f4;
+}
+.useanotherAccount__googleNameLetters span:nth-child(2),
+.useanotherAccount__googleNameLetters span:last-child {
+  color: #ec5547;
+}
+.useanotherAccount__googleNameLetters span:nth-child(3) {
+  color: #fbbc05;
+}
+.useanotherAccount__googleNameLetters span:nth-child(5) {
+  color: #34a853;
+}

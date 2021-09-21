@@ -1,0 +1,28 @@
+.emails {
+  background: var(--body-color-secondary);
+  height: 100%;
+}
+.emails__container {
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 70vh;
+}
+.emails__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.emails__container::-webkit-scrollbar-track {
+  background: #98a3a6;
+}
+
+/* Handle */
+.emails__container::-webkit-scrollbar-thumb {
+  background: #98a3a6;
+  border-radius: 999px;
+}
+
+/* Handle on hover */
+.emails__container::-webkit-scrollbar-thumb:hover {
+  background: #98a3a6;
+}

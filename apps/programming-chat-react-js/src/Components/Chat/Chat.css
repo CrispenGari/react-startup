@@ -1,0 +1,8 @@
+.chat {
+  border: 1px solid black;
+  flex: 0.8;
+  height: 100%;
+}
+.chat__body {
+  display: flex;
+}

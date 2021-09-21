@@ -1,0 +1,80 @@
+.sidebar {
+  flex: 0.2;
+  color: white;
+  background-color: var(--main-color);
+  min-width: 200px;
+}
+.sidebar__menu {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  padding: 5px;
+}
+.sidebar__menu:hover {
+  opacity: 0.8;
+  background-color: green;
+  cursor: pointer;
+  transition: color 3s ease-in;
+}
+.sidebar__menu > h2 {
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.sidebar__directMessagescontainer {
+  padding: 10px;
+}
+.sidebar__chanellsheaderLeft,
+.sidebar__directMessagessheaderLeft {
+  display: flex;
+  align-items: center;
+}
+.sidebar__iconbtn:hover,
+.sidebar__iconbtnLarge:hover {
+  background-color: black !important;
+}
+.sidebar__iconbtn {
+  width: 10px !important;
+  height: 10px !important ;
+}
+.sidebar__chanellsheaderLeft > h2,
+.sidebar__directMessagessheaderLeft > h2 {
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.sidebar__chanellsheader,
+.sidebar__directMessagesheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.sidebar__channelscontainer,
+.sidebar__directMessagescontainer {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 20vh;
+}
+.sidebar__channelscontainer::-webkit-scrollbar,
+.sidebar__directMessagescontainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sidebar__channelscontainer::-webkit-scrollbar-track,
+.sidebar__directMessagescontainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.sidebar__channelscontainer::-webkit-scrollbar-thumb,
+.sidebar__directMessagescontainer::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.sidebar__channelscontainer::-webkit-scrollbar-thumb:hover,
+.sidebar__directMessagescontainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

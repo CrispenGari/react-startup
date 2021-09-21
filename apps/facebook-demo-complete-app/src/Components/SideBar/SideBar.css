@@ -1,0 +1,35 @@
+.sidebar {
+  flex: 0.2;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+/* width */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.sidebar_footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+.sidebar > h2 {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 5px auto 5px 10px;
+}

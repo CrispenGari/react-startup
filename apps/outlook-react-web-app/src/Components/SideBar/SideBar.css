@@ -1,0 +1,63 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 80vh;
+  padding-bottom: 50px;
+}
+.sidebar__footer {
+  display: flex;
+  position: fixed;
+  width: 275px;
+  z-index: 10;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  padding: 2px;
+  justify-content: space-between;
+  background: inherit;
+  border-top: 1px solid lightgray;
+  background-color: var(--body-color);
+}
+.sidebar__icons {
+  font-size: 18px !important;
+}
+.sidebar__icons--active {
+  color: var(--main-color) !important;
+}
+.sidebar__items {
+  padding-bottom: 10px;
+}
+
+.sidebar > h5 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 10px 10px;
+}
+.sidebar > h5 > .MuiSvgIcon-root {
+  color: gray;
+  margin-right: 15px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #98a3a6;
+  border-radius: 999px;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #98a3a6;
+}

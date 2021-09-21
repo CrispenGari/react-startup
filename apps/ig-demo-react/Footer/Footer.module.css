@@ -1,0 +1,33 @@
+.footer_container {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  margin: auto;
+  object-fit: contain;
+  height: 50px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  object-fit: contain;
+}
+.footer_icons {
+  width: 10px;
+}
+.footer_icon_wraper {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  margin: 10px 20px 10px 25px;
+}
+.footer_icon_wraper:hover {
+  cursor: pointer;
+}
+.avata_me {
+  margin-bottom: 10px;
+}
+.footer_icon_wraper:last-child {
+  margin: 2px 20px 10px 25px;
+}

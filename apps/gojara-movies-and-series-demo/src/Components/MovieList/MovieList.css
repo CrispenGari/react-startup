@@ -1,0 +1,32 @@
+.movielist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3px 10px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+.movielist:hover {
+  background: #edf4ed;
+}
+.movielist__left > img {
+  height: 30px;
+  filter: grayscale(10);
+  margin-right: 5px 10px;
+}
+.movielist__left {
+  display: flex;
+  align-items: center;
+}
+.movielist__name {
+  color: #266061;
+  font-weight: 700;
+}
+.movielist__btn {
+  background-color: #428bca;
+  color: white;
+  border-radius: 2px;
+  padding: 1px 10px;
+  font-size: small;
+}

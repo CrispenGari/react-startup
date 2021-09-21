@@ -1,0 +1,27 @@
+.email {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.email:hover {
+  cursor: pointer;
+  background: #f5f7f7;
+}
+.email__left {
+  display: flex;
+  align-items: center;
+}
+.email__center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.email__center > b:nth-child(2) {
+  margin-left: 10px;
+}
+.email__center > div {
+  margin-left: 10px;
+  overflow: hidden;
+}

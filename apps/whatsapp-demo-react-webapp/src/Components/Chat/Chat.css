@@ -1,0 +1,40 @@
+.chat {
+  padding: 15px 10px;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+.chat:hover {
+  cursor: pointer;
+  background: rgb(235, 230, 230);
+}
+.chat__right {
+  margin-left: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.chat__rightTop > h2 {
+  font-weight: "400";
+  font-size: 15px;
+}
+.chat__rightTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat__rightBottom {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat__rightBottom > .MuiSvgIcon-root {
+  font-size: 18px;
+  color: rgb(63, 175, 231);
+}
+.chat__rightBottom > small {
+  color: gray;
+}
+.chat__rightTop > small {
+  color: rgb(42, 209, 102);
+}

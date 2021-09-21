@@ -1,0 +1,7 @@
+.widgets {
+  flex: 0.2;
+  height: 100vh;
+}
+.widgets__iframe {
+  border: none !important;
+}

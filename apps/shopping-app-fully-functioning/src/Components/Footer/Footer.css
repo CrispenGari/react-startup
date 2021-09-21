@@ -1,0 +1,159 @@
+.footer {
+  margin-top: 20px;
+  color: white;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--footer-color2);
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--footer-color);
+}
+.footer__top > h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.footer__top--center {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.footer__top--center > h2 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer__top--center > h2:nth-child(2) {
+  font-size: 10px;
+}
+.footer__top--centerInput {
+  display: flex;
+  border: 1px solid lightgray !important;
+  padding: 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.footer__top--centerInputText {
+  border: none !important;
+  outline: none !important;
+  caret-color: blue !important;
+  background: var(--body-color);
+  border-radius: 5px;
+}
+.footer__top--centerInputButton {
+  color: white !important;
+}
+.footer__top--right {
+}
+.footer__top--rightTop {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.footer__top--rightTop > h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+}
+.footer__top--rightTop > p {
+  font-size: 12px;
+  color: gray;
+}
+.footer__top--Button {
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 1px 10px;
+}
+.footer__top--Button:hover {
+  color: black;
+  background-color: var(--body-color);
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+}
+.footer__bottom--top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__bottom--topSection {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__bottom--topSection > h1 {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer__bottom--topSectionLink {
+  font-size: 12px;
+  font-weight: 400;
+  color: gray !important;
+  text-decoration: none;
+  margin-top: 2px;
+}
+.footer__bottom--topSection > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__bottom--topSection1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.footer__bottom--bottom {
+  display: flex;
+  padding-top: 10px;
+}
+.footer__bottom--bottomContainer {
+  margin-right: 10px;
+}
+.footer__bottom--bottomContainer > h1 {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer__bottom--bottomContainer > .MuiSvgIcon-root {
+  cursor: pointer;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.footer__bottom--bottomContainer > .MuiSvgIcon-root:hover {
+  cursor: pointer;
+  color: black;
+  background-color: var(--body-color);
+}
+.footer__bottom--bottomContainerPayments {
+  display: flex;
+  align-items: center;
+}
+.footer__bottom--bottomContainerPayments > h3 {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: italic;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.footer__bottom--bottomContainerPayments > h3:hover,
+.footer__bottom--bottomContainerPayments > .MuiSvgIcon-root:hover {
+  color: yellow;
+}

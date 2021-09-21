@@ -1,0 +1,19 @@
+.sidebaritem {
+  display: none;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+.sidebaritem:hover {
+  cursor: pointer;
+  background: #f5f6f7;
+}
+.sidebaritem > h4 {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.sidebaritem__avatar {
+  width: 45px !important;
+  height: 45px !important;
+}

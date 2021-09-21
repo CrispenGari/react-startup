@@ -1,0 +1,22 @@
+.navitem:hover {
+  cursor: pointer;
+}
+.navitem {
+  width: 200px;
+  margin-right: 10px;
+  word-wrap: unset;
+  opacity: 0.7;
+  transition: transform 100ms ease-out;
+}
+.navitem:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.navitem > h1 {
+  word-spacing: 3px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+}

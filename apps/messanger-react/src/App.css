@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  text-align: center;
+}
+.app__formControl {
+  display: flex !important;
+  flex-direction: row !important;
+  z-index: 1;
+  position: fixed;
+  padding-left: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.app__messageForm {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  padding: 5px 0px 20px 20px;
+  background-color: rgb(209, 202, 202);
+}
+.app__messageInput {
+  flex: 1;
+}
+.app_sendButton {
+  flex: 0;
+}

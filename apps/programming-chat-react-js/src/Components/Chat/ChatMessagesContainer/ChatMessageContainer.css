@@ -1,0 +1,34 @@
+.chatmessagecontainer {
+  flex: 0.7;
+  padding-bottom: 10px;
+  padding: 10px;
+}
+.chatmessagecontainer__msg {
+  overflow-y: scroll;
+  height: 65vh;
+}
+.chatmessagecontainer__input {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  z-index: 2;
+  padding: 10px 20px;
+}
+.chatmessagecontainer__msg::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.chatmessagecontainer__msg::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.chatmessagecontainer__msg::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.chatmessagecontainer__msg::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

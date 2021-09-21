@@ -1,0 +1,62 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+}
+.register__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
+}
+.register__logo {
+  font-size: 30px !important;
+  color: rgb(29, 161, 242) !important;
+  margin-bottom: 20px;
+}
+.register__button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 10px;
+  height: 30px;
+  background-color: rgb(29, 161, 242) !important;
+}
+.register__form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+.register__input {
+  margin-top: 15px !important;
+  background-color: white !important;
+}
+.register__text {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+}
+.register__text a {
+  color: gray !important;
+
+  text-decoration: none;
+  font-size: small;
+  margin-left: 10px;
+}
+.register__text a:hover {
+  text-decoration: underline;
+}
+.register__error {
+  color: red;
+  padding: 10px;
+  text-align: center;
+}

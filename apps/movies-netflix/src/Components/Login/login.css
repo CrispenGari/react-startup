@@ -1,0 +1,78 @@
+.body {
+  color: white;
+}
+.logincontainer {
+  background: grey;
+  width: 80%;
+  height: 250px;
+  margin: 200px auto;
+  text-align: center;
+  align-items: center;
+}
+.username-input {
+  border: none;
+  line-height: 30px;
+  font-size: large;
+  margin-top: 20px;
+  padding: 2px;
+}
+.p {
+  border: none;
+}
+button {
+  width: 100px;
+  border: solid 1 black;
+  background: black;
+  opacity: 90%;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+label {
+  margin: 10px;
+}
+.passwordContainer {
+  width: 60%;
+  margin: auto;
+}
+.validator {
+  width: 100%;
+  margin: auto;
+  height: 5px;
+  border: black solid 1px;
+  border-radius: 5%;
+}
+.inputs {
+  margin: auto;
+  width: 50%;
+}
+input {
+  width: 100%;
+}
+.weak_password {
+  background-color: red;
+  width: 30%;
+  height: 4px;
+}
+.strong_password {
+  background-color: orange;
+  width: 70%;
+  height: 4px;
+}
+.verystrong_password {
+  background-color: green;
+  width: 100%;
+  height: 4px;
+}
+.msg-0 {
+  color: blue;
+}
+.msg-3 {
+  color: green;
+}
+.msg-2 {
+  color: orange;
+}
+.msg-1 {
+  color: red;
+}

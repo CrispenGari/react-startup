@@ -1,0 +1,64 @@
+.message {
+  padding: 5px 10px;
+  background: white;
+  width: fit-content;
+  max-width: 60%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.messageme {
+  background: rgb(220, 248, 199);
+  margin-left: auto;
+  margin-top: 10px;
+}
+.messagesent {
+  font-size: 16px !important;
+  width: 20px !important;
+  margin-left: auto !important;
+  color: rgb(63, 175, 231);
+}
+.messages__inputSelf > input {
+  flex: 1;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.messages__inputSelf {
+  flex: 1;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  margin: 10px;
+}
+.messages__inputContainer {
+  width: 100%;
+}
+.messages__inputContainer > form {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.messages__inputAtachSend {
+  background: #075b52;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  margin-right: 20px;
+  height: 50px;
+}
+.messages__iconSend {
+  font-size: 20px !important;
+}
+.messages__inputAtachFile {
+  transform-origin: center;
+  transform: translateX(-50%) rotate(-45deg);
+}
+.messages__inputAtachFileB {
+  margin-right: -20px !important;
+}

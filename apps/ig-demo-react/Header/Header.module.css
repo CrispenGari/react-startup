@@ -1,0 +1,36 @@
+.main_header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  top: 0;
+  position: sticky; /* fixed as well can be used*/
+  z-index: 5;
+}
+.header_class {
+  border-bottom: lightgray 1px solid;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+
+  justify-content: space-between;
+}
+.message_icon {
+  margin-right: 20px;
+}
+#send_button {
+  transform: translateX(-50%) rotate(-45deg);
+  transform-origin: center;
+}
+
+#send_button {
+  margin-left: 20px;
+  margin-right: 0;
+}
+.rigth_icons {
+  margin-left: 0px;
+}
+.left_icons {
+  margin-right: 10px;
+}

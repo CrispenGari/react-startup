@@ -1,0 +1,22 @@
+.mainheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  border-bottom: 1px solid lightgray;
+  top: 0;
+}
+.mainheader__right {
+  display: flex;
+  align-items: center;
+}
+.mainheader__messageCounter:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.mainheader__messageCounter {
+  margin: 5px;
+  padding: 5px 10px;
+
+  border-radius: 5px;
+}

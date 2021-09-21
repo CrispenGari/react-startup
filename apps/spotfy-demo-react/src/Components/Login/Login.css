@@ -1,0 +1,26 @@
+.login {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+.login__anchor:active {
+  opacity: 0.5;
+  animation: ease-in 200ms;
+}
+.login__anchor {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  border-radius: 100px;
+  font-weight: 800;
+  background-color: #1db954;
+}
+.login__img {
+  height: 200px;
+  color: white;
+  padding: 20px;
+  border-radius: 100px;
+  font-weight: 800;
+  background-color: #1db954;
+}

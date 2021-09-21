@@ -1,0 +1,80 @@
+.login {
+  width: 100%;
+  margin: auto;
+}
+
+.login__body {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+.login__bodyright {
+  flex: 0.2;
+}
+
+.login__bodyleft {
+  flex: 0.8;
+  padding: 30px;
+}
+.login__bodyright > img {
+  width: 600px;
+}
+.login__bodyleftInputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.login__bodyleftInputs > input {
+  background: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  caret-color: #0084ff;
+  font-weight: 600;
+}
+.login__keepmein {
+  margin-top: 30px;
+}
+.login__keepmein > input {
+  margin-right: 10px;
+}
+.login__btn {
+  background-color: #0084ff !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 10px !important;
+  border-radius: 30px !important;
+  outline: none !important;
+  width: 70% !important;
+  margin: auto !important;
+  text-transform: inherit !important;
+}
+.login__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.login__footer > p > small {
+  color: gray;
+}
+.login__footercenter {
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
+.login__footercenter > small {
+  margin-left: 50px;
+}
+.login__footerright {
+  color: gray;
+}
+.login__footerright > span {
+  color: #0084ff;
+  font-weight: 700;
+}

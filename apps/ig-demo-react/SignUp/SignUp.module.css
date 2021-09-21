@@ -1,0 +1,17 @@
+.text_input {
+  padding: 5px !important;
+  color: black;
+}
+.sign_up_form {
+  display: flex;
+  flex-direction: column;
+}
+.sign_up_btn {
+  border: solid 1px black;
+}
+.sign_up_input {
+  margin-top: 10px;
+}
+.error_message{
+    color: red;
+}

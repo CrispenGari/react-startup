@@ -1,0 +1,28 @@
+.headerlogin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 20px 30px;
+  background: white;
+  z-index: 100;
+  opacity: 0.8;
+  border-bottom: 1px solid lightgray;
+}
+
+.headerlogin > img {
+  width: 40px;
+}
+.headerlogin__navs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerlogin__navs > h2 {
+  color: gray;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 20px;
+}

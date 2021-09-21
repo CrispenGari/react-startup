@@ -1,0 +1,45 @@
+.main {
+  flex: 0.8;
+  height: 70vh;
+}
+.main__navigators {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.main__navLeft,
+.main__navRight,
+.main__navcenter {
+  display: flex;
+  align-items: center;
+}
+.main__icons {
+  margin-right: 10px;
+}
+.label {
+  transform: translateX(-50%) rotate(-135deg);
+}
+.main__emails {
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+.main__emails::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.main__emails::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.main__emails::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.main__emails::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

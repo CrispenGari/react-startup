@@ -1,0 +1,104 @@
+.emailcomposer {
+  width: 90%;
+  height: 100%;
+  padding: 10px 0;
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: -1px -1px 1px 1px var(--body-color);
+}
+.emailcomposer__to {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.emailcomposer__to > input {
+  flex: 1;
+  margin: 0 10px;
+  padding: 5px 10px;
+  caret-color: var(--main-color);
+  border: none;
+  outline: none;
+}
+.emailcomposer__btnsmall1 {
+  text-transform: inherit !important;
+  width: 5px !important;
+  height: 25px !important;
+  padding: 0 !important;
+  background-color: #deecf9 !important;
+}
+.emailcomposer__btnsmall {
+  text-transform: inherit !important;
+  width: 5px !important;
+  height: 25px !important;
+  padding: 0 !important;
+}
+.emailcomposer__btnsmall:hover {
+  background-color: #deecf9 !important;
+}
+.emailcomposer__subject {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+.emailcomposer__subject > input {
+  flex: 1;
+  margin: 0 10px;
+  padding: 5px 10px;
+  caret-color: var(--main-color);
+  border: none;
+  outline: none;
+}
+.emailcomposer__body {
+  padding: 10px;
+}
+.emailcomposer__body > textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  caret-color: var(--main-color);
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  outline: none;
+}
+.emailcomposer__buttons {
+  display: flex;
+  border-top: 1px solid lightgray;
+  padding: 10px;
+  align-items: center;
+}
+.emailcomposer__btn {
+  text-transform: inherit !important;
+  color: white !important;
+  margin-right: 10px !important;
+  width: 50px !important;
+  background-color: var(--main-color) !important;
+}
+
+.emailcomposer__icon {
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.emailcomposer__icon:nth-child(3) {
+  color: gray;
+}
+.emailcomposer__icon:nth-child(4) {
+  color: var(--main-color);
+}
+.emailcomposer__icon:nth-child(5) {
+  color: orange;
+}
+.emailcomposer__icon:last-child {
+  color: gray;
+}
+.emailcomposer__btn:nth-child(2) {
+  text-transform: inherit !important;
+  color: black !important;
+  border: 1px solid lightgray !important;
+  background-color: var(--body-color) !important;
+}

@@ -1,0 +1,15 @@
+.main {
+  flex: 1;
+}
+.main__body {
+  display: flex;
+}
+.main__sidebar {
+  flex: 0.2;
+}
+.main__emails {
+  flex: 0.25;
+}
+.main__emailreader {
+  flex: 0.55;
+}

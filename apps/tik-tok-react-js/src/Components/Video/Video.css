@@ -1,0 +1,25 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.video__container:hover{
+  cursor: pointer
+}
+.video__video {
+  /* object-fit: fill; */
+  width: 100%;
+  height: 100%;
+}
+.video__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  background-color: black;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 0;
+  padding: 5px;
+}

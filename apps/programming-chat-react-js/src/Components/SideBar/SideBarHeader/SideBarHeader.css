@@ -1,0 +1,31 @@
+.sidebarheader {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+  background-color: green;
+}
+
+.sidebarheader > p {
+  font-size: 12px;
+  font-weight: 300;
+  color: gray;
+}
+.sidebarheader__top {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.sidebarheader__top > h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.sidebarheader__top > .MuiSvgIcon-root {
+  color: white !important;
+  font-size: 45px !important;
+}
+.sidebarheader__top > .MuiSvgIcon-root:hover {
+  cursor: pointer;
+}

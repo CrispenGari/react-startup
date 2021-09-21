@@ -1,0 +1,85 @@
+.account {
+}
+.account__info {
+  display: flex;
+  margin-bottom: 10px;
+}
+.account__infoUser > p {
+  color: gray;
+  font-size: 12px;
+}
+.account__infoUser > h2 {
+  font-weight: 700;
+  font-size: 16px;
+}
+.accountAvatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+.account__infoUser {
+  margin-left: 10px;
+}
+.account__viewBtn {
+  width: 100%;
+  display: flex;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.account__viewBtn > button {
+  flex: 1;
+  color: #0077b5;
+  border: 2px solid #0077b5;
+  font-weight: bold;
+}
+.account__viewBtn > button:hover {
+  background: lightblue;
+  cursor: pointer;
+}
+
+.account__account {
+  display: flex;
+  flex-direction: column;
+}
+.account__account > h3 {
+  background: var(--body-color);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.account__account > small {
+  color: gray;
+  margin-bottom: 5px;
+}
+.account__account > small:hover {
+  color: gray;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.account__manage {
+  display: flex;
+  flex-direction: column;
+}
+.account__manage > h3 {
+  background: var(--body-color);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.account__manage > small {
+  color: gray;
+  margin-bottom: 5px;
+}
+.account__manage > small:hover {
+  color: gray;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.account__manage > hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-width: 1px;
+}

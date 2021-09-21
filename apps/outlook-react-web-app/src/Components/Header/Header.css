@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  padding: 5px 20px;
+  background-color: var(--main-color);
+}
+.MuiButtonBase-root.MuiIconButton-root {
+  margin-right: 10px;
+}
+.header__icon {
+  color: white !important;
+  font-size: 30px !important;
+}
+.header__avatar {
+  cursor: pointer !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+.header__center {
+  flex: 1;
+  display: flex;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.search__input {
+  display: flex;
+  align-items: center;
+  background-color: var(--select-color);
+  padding: 5px 10px;
+  border-radius: 2px;
+  width: 350px;
+}
+.search__input > input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 3px 5px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+.header__searchIcons {
+  font-weight: 100 !important;
+  margin-left: 10px;
+  cursor: pointer !important;
+  color: gray !important;
+}
+.expand {
+  flex: 1;
+  background-color: white;
+  flex-direction: row-reverse;
+  background-color: var(--body-color);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.expand > input {
+  background-color: white !important;
+  padding: 9px;
+  margin-left: 10px;
+}

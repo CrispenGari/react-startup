@@ -1,0 +1,33 @@
+.rooms {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 40vw;
+}
+.rooms__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rooms__top > h4 > span {
+  color: gray;
+  font-size: 12;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.rooms__bottom {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  margin-top: 10px;
+}
+.rooms__bottom::-webkit-scrollbar {
+  display: none;
+}
+.rooms__avatar {
+  margin-right: 10px !important;
+}

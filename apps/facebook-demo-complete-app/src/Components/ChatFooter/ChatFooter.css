@@ -1,0 +1,16 @@
+.chatfooter {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.chatfooter > input {
+  flex: 1;
+  outline: none;
+  border: none;
+  width: 30%;
+}
+.chatfooter__icon {
+  margin-right: 5px;
+  color: gray;
+  cursor: pointer;
+}

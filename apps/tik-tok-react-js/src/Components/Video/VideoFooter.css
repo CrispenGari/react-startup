@@ -1,0 +1,26 @@
+.videofooter {
+  position: absolute;
+  width: 100%;
+  color: white;
+  bottom: 55px;
+  margin: 5px;
+  padding: 5px;
+}
+.videofooter__music {
+  display: flex;
+}
+.videofooter__albumIcon {
+  margin-right: 10px !important;
+  width: 30px;
+  /* Changes the color of the image to black if black otherwise white */
+  filter: invert(1);
+  animation: myAmination 5s infinite linear !important;
+}
+@keyframes myAmination {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

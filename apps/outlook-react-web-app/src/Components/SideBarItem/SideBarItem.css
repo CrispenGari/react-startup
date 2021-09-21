@@ -1,0 +1,31 @@
+.sidebaritem {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.sidebaritem > .MuiSvgIcon-root {
+  color: gray;
+  margin-right: 10px;
+}
+.sidebaritem > h5 {
+  color: lightslategray;
+  font-weight: 200;
+}
+.sidebaritem:hover {
+  background-color: #edebe9;
+}
+.sidebaritem--active {
+  background-color: #c7e0f4;
+}
+.sidebaritem--add {
+  text-align: center;
+
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--body-color);
+}
+.sidebaritem--add > h5 {
+  color: var(--main-color) !important;
+  font-weight: 600;
+}

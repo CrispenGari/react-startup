@@ -1,0 +1,30 @@
+.videosidebar {
+  position: absolute;
+  color: white;
+  top: 70px;
+  right: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.videosidebar__item:active {
+  color: black;
+}
+.videosidebar__item:hover {
+  cursor: pointer;
+}
+.videosidebar__avatar:hover {
+  cursor: pointer;
+}
+.videosidebar__cameraIcon {
+  color: white !important;
+}
+.videosidebar__input {
+  display: none;
+}
+.videosidebar__item {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+}

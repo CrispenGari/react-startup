@@ -1,0 +1,105 @@
+.sidebar {
+  flex: 0.2;
+  height: 70vh;
+}
+.sidebar__buttonContainer {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 18px;
+  margin-bottom: 10px;
+}
+.sidebar__button:hover {
+  cursor: pointer;
+}
+.sidebar__button {
+  box-shadow: 1px 1px 1px 1px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 120px;
+  border-radius: 70px;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  background-color: white;
+}
+.sidebar hr {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+.sidebar__top {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.sidebar__meeting {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 10px;
+}
+.sidebar__meeting > p {
+  padding: 0 10px 10px;
+  font-weight: 500;
+}
+.sidebar__hangouts {
+  padding: 10px;
+}
+.sidebar__chatsArea > p:first-child {
+  color: #9c9fb5;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+.sidebar__chatsArea > p:last-child {
+  color: #4e78cd;
+}
+.sidebar__chatsArea > p:last-child:hover {
+  cursor: pointer;
+}
+.sidebar__avatarAdd:hover {
+  cursor: pointer;
+  border-radius: 10px;
+}
+.sidebar__AvatarUserName {
+  display: flex;
+  padding: 2px;
+}
+.sidebar__AvatarUserName > p {
+  margin-left: 10px;
+}
+.sidebar__chatsArea {
+  text-align: center;
+}
+.sidebar__avatarAdd {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar__hangouts > p:first-child {
+  padding: 0 10px 10px;
+  font-weight: 500;
+}
+.sidebar__avatar {
+  width: 30px !important;
+  height: 30px !important;
+}
+.sidebar__footer {
+  margin-top: 10px;
+  border-top: 1px solid lightgray;
+  display: flex;
+  position: sticky;
+  background-color: white;
+  z-index: 2;
+  bottom: 0;
+  justify-content: space-between;
+  padding: 5px;
+}
+.sidebar__footerIcons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sidebar__footerIcon:hover {
+  background-color: #9c9fb5;
+  border-radius: 50%;
+}
