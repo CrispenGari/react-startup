@@ -1,0 +1,50 @@
+.add {
+  background: white;
+  width: 80%;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.add > h1 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.add__btnRestore,
+.add__btnAdd,
+.add__btnClose {
+  text-transform: inherit !important;
+  color: white !important;
+  width: 120px !important;
+}
+.add__form > input {
+  margin-top: 25px;
+  padding: 5px 10px;
+  background-color: var(--body-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.add__controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.add__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.add__btnClose {
+  background-color: orangered !important;
+}
+.add__btnAdd {
+  background-color: lightseagreen !important;
+}
+.add__btnRestore {
+  background-color: orange !important;
+}

@@ -1,0 +1,25 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  --header-color: #25282A;
+  --body-color: #fafafa;
+  background: var(--body-color);
+  overflow-y: hidden;
+  overflow-y: hidden;
+}
+.app{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app__main{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  max-height: 95vh;
+}

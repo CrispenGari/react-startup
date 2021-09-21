@@ -1,0 +1,29 @@
+.sidebaritem {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 0.5px solid lightgray;
+  margin-bottom: 3px;
+  width: 100% !important;
+  background-color: var(--body-color) !important;
+}
+.sidebaritem:hover {
+  background-color: white !important;
+}
+.sidebaritem > p {
+  color: gray;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: 300;
+}
+.sidebaritem > .MuiSvgIcon-root:first-child {
+  color: orange;
+}
+.sidebaritem.delete > .MuiSvgIcon-root:first-child {
+  color: red !important;
+}
+.sidebaritem.add > .MuiSvgIcon-root:first-child {
+  color: lightseagreen !important;
+}

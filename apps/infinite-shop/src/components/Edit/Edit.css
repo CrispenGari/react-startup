@@ -1,0 +1,102 @@
+.edit {
+  width: 95%;
+  background-color: white !important;
+  border: none !important;
+  max-width: 500px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.edit > h1 {
+  width: 100%;
+  padding: 5px !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid lightgray;
+}
+.edit__main {
+  display: flex;
+  padding: 5px;
+}
+.edit__left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.edit__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 5px !important;
+}
+.edit__left > img {
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: contain !important;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 425px) {
+  .edit__left > img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+  }
+}
+.edit__right > h1 {
+  color: lightseagreen;
+  padding: 5px !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid lightgray;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.edit__right__form {
+  display: flex;
+  flex-direction: column;
+}
+.edit__right__form > input,
+select {
+  margin: 5px auto;
+  width: 170px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightseagreen;
+  background: #fafafa;
+}
+.edit__right__form > label {
+  font-size: 14px;
+  margin: 10px auto;
+  width: 170px;
+  color: lightseagreen;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 20px auto;
+}
+.edit__right__form > label > input {
+  margin: 10px auto;
+  width: 170px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid orangered;
+  background: #fafafa;
+}
+.edit__right__form button {
+  margin: 10px auto;
+  width: 170px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid lightseagreen;
+}
+.edit__right__form button:active {
+  background: orange;
+  color: white;
+}

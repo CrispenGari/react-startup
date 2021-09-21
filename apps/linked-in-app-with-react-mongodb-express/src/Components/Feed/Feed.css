@@ -1,0 +1,51 @@
+.feed {
+  flex: 0.5;
+}
+.feed__more {
+  display: grid;
+  place-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.feed__more > button {
+  padding: 5px 20px;
+  color: gray;
+  font-weight: 600;
+}
+.feed__more > button:hover {
+  border: 2px solid gray;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.feed__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.feed__filter > hr {
+  flex: 1;
+}
+.feed__filter > small {
+  color: gray;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.feed__filter > small > span {
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.feed__filterMenuItem {
+  display: flex;
+  flex-direction: column;
+}
+.feed__filterMenuItem > small {
+  padding: 5px 0;
+  width: 70px;
+}

@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  --body-color: #F6F8FA;
+  background: var(--body-color);
+}
+.app{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.app::-webkit-scrollbar{
+  display: none;
+}
+.app__main{
+  flex: 1;
+}

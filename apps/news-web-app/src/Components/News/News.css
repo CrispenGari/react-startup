@@ -1,0 +1,45 @@
+.news{
+     flex: 0.85;
+     overflow-x: hidden;
+     overflow-y: scroll;
+}
+.news>h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: lightseagreen;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    position: sticky;
+    background: inherit;
+    z-index: 3;
+    width: 100%;
+}
+.news__container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* width */
+*::-webkit-scrollbar {
+  width: 9px;
+ 
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: var(--header-color);
+   border-radius: 999px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: lightseagreen;
+}

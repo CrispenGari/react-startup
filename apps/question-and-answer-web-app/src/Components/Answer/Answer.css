@@ -1,0 +1,35 @@
+.answer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 7px auto;
+    user-select: none;
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+.answer>h1{
+    font-size: 14px;
+    font-weight: 700;
+
+}
+.answer__body{
+    display: flex;
+}
+.answer__body>p{
+    color: gray;
+    flex: 1;
+    padding: 3px;margin: 5px 0;
+    font-size: 13px;
+}
+.answer__body>.MuiSvgIcon-root{
+    color: green;
+    margin-left: 10px;
+}
+.answer__rating{
+    font-size: 18px !important;
+    margin: 5px 0 !important;
+}

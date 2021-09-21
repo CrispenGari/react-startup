@@ -1,0 +1,71 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--header-color);
+  width: 100vw;
+  color: white;
+  max-height: 60px;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.header__left {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.header__left > h1 {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.header__left > .MuiSvgIcon-root {
+  color: seagreen;
+  margin-right: 10px;
+  font-size: 50px;
+}
+.header__center {
+  margin: 0 20px;
+  flex: 1;
+  border: 0.5px solid lightgray;
+  max-width: 400px;
+  border-radius: 999px;
+  padding: 0px 10px 0px 1px;
+  display: flex;
+  align-items: center;
+}
+.header__center > input {
+  flex: 1;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  caret-color: lightseagreen;
+}
+.header__center > input::placeholder {
+  color: lightseagreen;
+}
+.header__center > .MuiSvgIcon-root {
+  margin: 5px;
+  cursor: pointer;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header__calender {
+  margin-right: 10px !important;
+  color: orange !important;
+  cursor: pointer !important;
+}
+.header__notification {
+  margin-left: 10px !important;
+  color: lightseagreen !important;
+  cursor: pointer !important;
+}

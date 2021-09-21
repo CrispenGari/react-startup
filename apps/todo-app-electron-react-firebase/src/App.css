@@ -1,0 +1,21 @@
+body {
+  --header-color: #282c34;
+  --body-color: #f5f5f5;
+  background-color: var(--body-color);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app__todolist {
+  flex: 1;
+}
+.app__main {
+  display: flex;
+  justify-content: space-between;
+}

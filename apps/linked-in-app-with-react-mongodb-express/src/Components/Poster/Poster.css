@@ -1,0 +1,68 @@
+.poster {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  border: 0.6px solid lightgray;
+  color: gray;
+}
+.poster__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.poster__topLeft {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  padding: 10px;
+}
+.poster__topLeft:hover {
+  color: var(--text-color2);
+  text-decoration: underline;
+}
+.poster__topRight {
+  display: flex;
+  align-items: center;
+}
+.poster__topRightButton {
+  border-left: 1px solid lightgray;
+  padding: 10px;
+}
+.poster__topRightButton > label {
+  cursor: pointer;
+}
+.poster__topRightButton > label > .MuiSvgIcon-root {
+  font-size: 30px;
+}
+.poster__topRightButton:hover {
+  color: black;
+}
+.poster__bottom {
+  padding: 10px;
+}
+.poster__bottom > p > span {
+  color: var(--text-color2);
+  font-weight: 500;
+}
+.poster__bottom > p > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.poster__input {
+  padding: 10px;
+  text-decoration: none;
+  caret-color: var(--text-color2);
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.poster__input:hover {
+  text-decoration: none;
+}
+.poster__inputFile {
+  display: none;
+}

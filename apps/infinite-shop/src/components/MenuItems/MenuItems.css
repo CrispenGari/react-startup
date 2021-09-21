@@ -1,0 +1,67 @@
+.menuiterms {
+  display: flex;
+  align-items: center;
+  margin-left: 10px !important;
+  flex-direction: column;
+  width: fit-content !important;
+  padding: 10px 10px 10px 0 !important;
+}
+.menuiterms__user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px !important;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px !important;
+}
+.header__user__avatar {
+  width: 30px !important;
+  height: 30px !important;
+}
+.menuiterms__user > h1 {
+  font-size: 14px;
+}
+.menuiterms__icon__button {
+  margin: 0px 5px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 5px !important;
+}
+.menuiterms__login__button {
+  background-color: black;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.menuiterms > h1 {
+  background: black;
+  color: white;
+  padding: 3px 12px;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: normal !important;
+  display: none;
+}
+.menuitems__item__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-bottom: 1px solid lightgrey;
+}
+.menuitems__item__container:last-child {
+  margin-bottom: 5px !important;
+}
+.menuitems__item__container > h1 {
+  font-size: 14px;
+}
+.menuiterms > hr {
+}

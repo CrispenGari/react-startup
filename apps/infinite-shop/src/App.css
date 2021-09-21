@@ -1,0 +1,18 @@
+body {
+  user-select: none;
+  user-zoom: none;
+  --body-color: #fafafa;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center center center;
+  background: url(https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg);
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+::-webkit-scrollbar {
+  display: none;
+}

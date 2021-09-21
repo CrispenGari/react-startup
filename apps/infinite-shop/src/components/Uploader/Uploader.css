@@ -1,0 +1,137 @@
+.uploader {
+  flex: 1;
+  background: white;
+  margin: 5px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+.uploader > h1 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 1px solid lightgray !important;
+}
+.uploader__add {
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid lightgray !important;
+}
+.uploader__update {
+  padding: 5px 0;
+  border-bottom: 1px solid lightgray !important;
+}
+.uploader__delete {
+  padding: 5px 0;
+  border-bottom: 1px solid lightgray !important;
+}
+.uploader__add > h1,
+.uploader__delete > h1,
+.uploader__update > h1 {
+  text-transform: uppercase;
+  user-select: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+.uploader__alert {
+  font-size: 14px !important;
+}
+.uploader__add__controls {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  justify-content: space-around;
+}
+.uploader__add__controls > input,
+.uploader__add__controls > select {
+  width: 100%;
+  max-width: 200px;
+  margin: 5px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightseagreen;
+  background: #fafafa;
+}
+.uploader__add__preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.uploader__add__preview > h1 {
+  text-transform: uppercase;
+  user-select: none;
+  font-weight: 500;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  margin: 4px 0;
+}
+.uploader__add__preview > img,
+.product__preview__container > img {
+  max-width: 500px;
+  width: 90%;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 5px !important;
+}
+.uploader__add__preview {
+}
+.product__preview__container {
+  display: flex;
+  justify-content: space-between;
+}
+.product__preview__details {
+  flex: 1;
+}
+.product__preview__details > h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.product__preview__details > p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product__preview__details > p > span:first-child {
+  font-weight: bold;
+}
+.uploader button {
+  width: 100%;
+  max-width: 200px;
+  margin: 5px auto;
+  outline: none;
+  border: none;
+  padding: 5px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.uploader button:active {
+  background: orange;
+  color: white;
+}
+#uploader___file__input {
+  display: none !important;
+}
+.uploader__icon__button {
+}
+.uploader__icon__button__icon {
+}
+.uploader__add__controls > label {
+  width: 100%;
+  max-width: 200px;
+  outline: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.uploader__error {
+  border-color: red !important;
+}

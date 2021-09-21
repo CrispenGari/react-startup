@@ -1,0 +1,19 @@
+.carousel {
+  padding: 5px;
+  width: 100%;
+  margin: 10px auto;
+  background: white;
+  border: 2px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  border-radius: 5px;
+}
+.carousel > img {
+  width: 50vh !important;
+  object-fit: contain;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+}

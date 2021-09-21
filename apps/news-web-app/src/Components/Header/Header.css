@@ -1,0 +1,24 @@
+.header{
+    position: sticky;
+    top: 0;
+    border-bottom: .5px solid lightgray;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-color);
+    color: white;
+    user-select: none;
+}
+.header>h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 2px ;
+}
+.header{
+    color:gray;
+    font-size: 12px;
+       text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+
+.detector{
+    flex: .8;
+    border: .5px solid lightgray;
+    background-color: white;
+    margin: 20px 5px 20px 0;
+    display: flex;
+}
+.detector__container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px auto;
+}
+.detector__canvas, .detector__webcam{
+   width: 100%;
+   max-width: 800px;
+   height: 450px;
+   object-fit: contain;
+   max-height: 80vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+}

@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  padding: 10px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 50px !important;
+  width: 100%;
+}
+.header__left {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 10px !important;
+}
+.header__left__icon {
+  font-size: 25px;
+  color: limegreen;
+}
+.header__left h1 {
+  margin-left: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: lightseagreen;
+}
+.header__left h1::first-letter {
+  color: orange;
+}
+.header__center {
+  flex: 1;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  margin-left: 10px !important;
+}
+.header__right__user {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 10px !important;
+}
+.header__user__avatar {
+  width: 30px !important;
+  height: 30px !important;
+}
+.header__right__user > h1 {
+  font-size: 12px;
+}
+.header__right__icon__button {
+  margin: 0px 5px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 5px !important;
+}
+.header__right__login__button {
+  background-color: black;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.header__right > h1 {
+  background: black;
+  color: white;
+  padding: 3px 12px;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: normal !important;
+  display: none;
+}
+.header__right__menu {
+  margin-left: 10px !important;
+  display: none !important;
+}
+.header__right__popover {
+  /* padding: 0 !important; */
+}
+@media only screen and (max-width: 425px) {
+  .header__right {
+    display: none !important;
+  }
+  .header__right__menu {
+    display: inline-flex !important;
+  }
+  .header__left__icon {
+    font-size: 20px;
+  }
+  .header__left h1 {
+    font-size: 16px;
+  }
+}

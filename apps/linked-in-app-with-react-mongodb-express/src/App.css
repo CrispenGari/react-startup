@@ -1,0 +1,12 @@
+body {
+  --header-color: #283e4a;
+  --body-color: #f5f5f5;
+  --text-color1: rgb(0, 151, 178);
+  --text-color2: rgb(0, 115, 177);
+  background: var(--body-color);
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: wrap;
+}

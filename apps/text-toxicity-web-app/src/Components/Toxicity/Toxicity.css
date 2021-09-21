@@ -1,0 +1,37 @@
+.toxicity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 7px auto;
+  user-select: none;
+  background: var(--body-color);
+  padding: 5px;
+  border-radius: 3px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+.toxicity > h1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: green;
+}
+.toxicity__body {
+  display: flex;
+}
+.toxicity__body > p {
+  color: gray;
+  flex: 1;
+  padding: 3px;
+  margin: 5px 0;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.toxicity__body > .MuiSvgIcon-root {
+  color: green;
+  margin-left: 10px;
+}
+.toxicity__rating {
+  font-size: 18px !important;
+  margin: 5px 0 !important;
+}

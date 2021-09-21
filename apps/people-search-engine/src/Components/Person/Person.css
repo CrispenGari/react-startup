@@ -1,0 +1,74 @@
+.person {
+  padding: 5px 10px;
+  background: var(--body-color);
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 5px 0;
+  user-select: none;
+}
+.person > h1 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin: 5px;
+}
+.person__center {
+  width: 100%;
+  height: 40vh;
+  display: grid;
+  place-items: center;
+  margin-bottom: 5px;
+  background: white !important;
+}
+.person__center > img {
+  border: 2px solid lightseagreen;
+  border-radius: 8px;
+  height: 38vh;
+  margin: 5px auto;
+  align-self: center;
+  object-fit: contain;
+}
+.person__details {
+  background: white;
+  padding: 5px;
+  border: 0.5px solid lightgrey;
+  margin: 10px 0 0 0;
+}
+.person__details__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  margin: 3px 0;
+}
+.person__details__row:nth-child(odd) {
+  background: var(--body-color);
+}
+.person__details__row > span {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: lightseagreen;
+  text-align: center;
+}
+.person__details__row > span::first-letter {
+  color: green;
+}
+.person__noimage {
+  background: var(--dark-theme) !important;
+  border-radius: 5px;
+  border: 2px solid lightgrey;
+  color: gray;
+  display: grid;
+  placement: center;
+}
+.person__noimage > h1 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+.menus {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px lightgray;
+  padding: 5px 10px;
+  background-color: var(--body-color);
+  font-size: 14px;
+}
+.menu__left {
+  display: flex;
+  width: fit-content;
+  cursor: pointer;
+}
+.menu__left > p {
+  margin-left: 20px;
+  color: gray;
+  font-size: 14px;
+}
+.menu__right {
+  display: flex;
+  align-items: center;
+}
+.menu__right > button {
+  background: white;
+  outline: none;
+  padding: 2px;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+.menu__right > button:hover {
+  background: lightgray;
+}
+.menu__right > h1 {
+  margin-left: 10px;
+  color: gray;
+  font-size: 14px !important;
+}

@@ -1,0 +1,39 @@
+.todo {
+  display: flex;
+  cursor: pointer;
+}
+.todo__left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.todo__left > h1 {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.todo__left > p {
+  color: gray;
+  font-size: small;
+  letter-spacing: 1.5px;
+}
+.todo__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.todo__right > time {
+  font-size: 11px;
+  color: gray;
+  font-style: italic;
+}
+.todo__deleteico {
+  font-size: 20px !important;
+  color: orange !important;
+}
+.todo__deletebtn {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 10px auto !important;
+}

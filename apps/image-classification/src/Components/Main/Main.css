@@ -1,0 +1,45 @@
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.main__answers {
+}
+
+.main__loading {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.main__loading > h1 {
+  color: lightseagreen;
+  user-select: none;
+  font-style: italic;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.main__loading > .MuiSvgIcon-root {
+  color: orange;
+  animation: loading infinite 1s linear;
+  font-size: 50px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,41 @@
+.notifications {
+  background-color: #fafafa;
+  width: 100vw;
+  height: 100vh;
+}
+.notifications__main {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  background-color: #fafafa;
+}
+.notification__time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notification__time > h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px black;
+}
+.notification__time > p {
+  color: gray;
+  font-size: 14px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}
+.notifications__main > h1 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: lightseagreen;
+  text-shadow: 1px 1px black;
+}
+.notifications__icon {
+  font-size: 50px !important;
+  color: orange;
+}

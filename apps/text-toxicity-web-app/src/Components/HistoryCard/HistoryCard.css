@@ -1,0 +1,57 @@
+.historycard {
+  width: 100%;
+  margin: 7px auto;
+  background: white;
+  max-width: 500px;
+  user-select: none;
+  padding: 5px;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.historycard__top {
+  display: flex;
+  padding: 5px;
+  background: var(--body-color);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  border-bottom: 1px solid lightgrey;
+}
+.historycard__top > h1 {
+  color: red !important;
+  font-size: 12px !important;
+  text-transform: capitalize;
+  flex: 1 !important;
+  margin: 0 7px 0px 0px;
+}
+.history__delete {
+  width: 25px !important;
+  height: 25px !important;
+}
+.history__delete__icon {
+  color: orange !important;
+  font-size: 16px !important;
+}
+.historycard > p {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: 5px 0;
+  width: 100%;
+  background: var(--body-color);
+  padding: 5px;
+  border-radius: 3px;
+}
+.historycard > p > small {
+  color: green;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+}
+.history__rating {
+  font-size: 12px !important;
+}
+small.history__true {
+  color: gray !important;
+}

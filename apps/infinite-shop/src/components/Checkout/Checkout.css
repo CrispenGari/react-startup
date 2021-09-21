@@ -1,0 +1,116 @@
+.checkout {
+  width: 100%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.checkout__left {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.checkout__left > h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  text-shadow: 1px 1px black;
+  margin: 10px 0 !important;
+  letter-spacing: 1px;
+}
+.checkout__right,
+.checkout__right--no-products {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 20px !important;
+}
+.checkout__right--no-products {
+  display: grid;
+  place-items: center;
+  height: 200px !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+.checkout__right > p {
+  background: #fafafa;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  min-width: 400px !important;
+}
+.checkout__right > p > span {
+  flex: 1;
+  font-size: 12px !important;
+
+  width: 100%;
+  text-align: center;
+}
+.checkout__price__countUp {
+  font-weight: bold;
+  color: black !important;
+}
+.checkout__right > p:nth-child(even) {
+  background: white;
+}
+.checkout__right > p:first-child {
+  border-bottom: 1px solid black;
+}
+.checkout__right > p:first-child > span {
+  flex: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px !important;
+}
+.checkout__right > p:last-of-type {
+  border-top: 1px solid black !important;
+}
+.checkout__right > p:last-of-type > span {
+  flex: 1;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px !important;
+}
+
+.checkout__controls {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout__controls > button,
+.checkout__right--no-products > button {
+  cursor: pointer;
+  width: 80px;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background: lightseagreen;
+  border-radius: 5px;
+}
+.checkout__controls > button:first-child,
+.checkout__right--no-products > button {
+  background: black;
+}
+.checkout__controls > button:last-child {
+  background: orange;
+}
+.checkout__controls > button:active {
+  cursor: pointer;
+  background: limegreen;
+}
+@media only screen and (max-width: 425px) {
+  .checkout__right--no-products {
+    font-size: 13px !important;
+  }
+  .checkout__left > h1 {
+    font-size: 15px !important;
+  }
+}

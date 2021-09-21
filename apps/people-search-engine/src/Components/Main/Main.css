@@ -1,0 +1,46 @@
+.main {
+  width: 100%;
+  padding: 10px;
+  max-width: 500px;
+  margin: 10px auto;
+  background: white;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+  user-select: none;
+  user-zoom: none;
+}
+.main__top > h1 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: lightseagreen;
+  text-align: center;
+}
+.main__top > h1::first-letter {
+  color: green;
+}
+.main__number_of_results {
+  color: gray;
+  font-size: 12px;
+  text-align: center;
+  margin: 5px auto;
+  width: 100% !important;
+  justify-content: center;
+  display: flex;
+}
+.main__nopeople {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: gray;
+  text-align: center;
+  height: 40vh;
+}
+.main__nopeople > img {
+  width: 150px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-top: 10px;
+}

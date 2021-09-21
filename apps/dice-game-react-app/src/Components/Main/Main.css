@@ -1,0 +1,32 @@
+.main {
+  width: 100%;
+  margin: 10px auto;
+  max-width: 500px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  border-radius: 5px;
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  user-zoom: none;
+  background: white !important;
+}
+.main__button {
+  padding: 5px;
+  color: white;
+  background-color: var(--header-color);
+  width: 80px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.main__button:hover {
+  background: yellowgreen;
+}
+.main__button:active {
+  background: lightseagreen;
+}

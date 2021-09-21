@@ -1,0 +1,51 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.home__help {
+  position: fixed !important;
+  right: 20px;
+  top: 80vh !important;
+  z-index: 10;
+  align-items: flex-end;
+}
+.home__help__icon__button {
+  background: lightseagreen !important;
+}
+.home__help__icon {
+  color: white !important;
+}
+.home__help__messages {
+  position: relative;
+}
+.home__help__message {
+  position: fixed;
+  margin-top: -55px !important ;
+  right: 20px;
+  top: 80vh !important;
+  z-index: 11;
+  width: fit-content !important;
+  background: white;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  margin-top: 20px;
+  color: black;
+  border-radius: 5px;
+  max-width: 60%;
+}
+.home__help__message:before,
+.home__help__message:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 19px;
+  border: 11px solid transparent;
+  border-top-color: #dddddd;
+}
+.home__help__message:after {
+  right: 20px;
+  border: 10px solid transparent;
+  border-top-color: #ffffff;
+}

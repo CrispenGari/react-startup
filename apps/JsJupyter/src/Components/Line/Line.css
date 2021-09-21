@@ -1,0 +1,82 @@
+.line {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  padding: 5px 5px 5px 30px;
+  flex-direction: column;
+}
+.line:focus-within {
+  border: 1px solid green;
+  border-left: 3px solid green;
+}
+.line__input {
+  display: flex;
+}
+.line__input > textarea {
+  flex: 1;
+  height: fit-content;
+  outline: none;
+  border: 1px solid lightgray;
+  margin: 0px 10px;
+  background-color: var(--body-color);
+  padding: 5px;
+  resize: none;
+  border-radius: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+.line__input > h1,
+.line__output > h1 {
+  color: blue;
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+.line__output {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+}
+.line__output--hide {
+  display: none;
+}
+.line__output > h1 {
+  color: orange;
+}
+.line__output__code__container {
+  padding: 5px;
+  margin-left: 10px;
+  background: #f5f5f5 !important;
+  flex: 1;
+  border-radius: 5px;
+  display: flex;
+}
+
+.line__output__code__container > code {
+  flex: 1;
+}
+.line__output__code__container > button {
+  background: white;
+  padding: 2px 10px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.line__output__code__container > button:hover {
+  background: lightgray;
+}
+.line__output__code__container > button:active {
+  background: orange;
+  color: white;
+}
+.line__output__message {
+  color: orangered;
+}
+.line__output__message--number {
+  color: blue !important;
+}
+.line__output__markdown {
+  padding: 5px 5px 5px 50px;
+  user-select: none;
+}

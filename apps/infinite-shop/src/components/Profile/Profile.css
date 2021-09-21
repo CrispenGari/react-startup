@@ -1,0 +1,64 @@
+.profile {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+.profile__top {
+  height: 100px;
+  background: lightseagreen;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.profile__top__avatar {
+  width: 100px !important;
+  height: 100px !important;
+  margin-bottom: -50px !important;
+}
+.profile__desc {
+  margin-top: 30px !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile__desc > h1 {
+  align-items: center;
+  font-size: 14px !important;
+  margin: 5px auto;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.profile__desc > h1:last-child {
+  user-select: text !important;
+}
+.profile > button {
+  color: white;
+  background: lightseagreen;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.profile > button:active {
+  background: orange;
+}

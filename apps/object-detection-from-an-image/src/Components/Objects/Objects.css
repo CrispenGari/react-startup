@@ -1,0 +1,51 @@
+.objects, .objects__list__loading{
+    width: 100%;
+    border: .5px solid lightgray;
+    background-color: white;
+    margin: 20px 5px 20px 0;
+    height: 250px;
+    margin-bottom: 15px !important;
+}
+.objects__list__loading{
+    display: grid;
+    place-items: center;
+}
+.objects__list__loading>p{
+    color: var(--text-color);
+    text-align: center;
+}
+.objects__list__loading>.MuiSvgIcon-root{
+    font-size: 90px;
+    color: orange;
+    animation: rotate-animation 500ms infinite linear;
+}
+.objects__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    padding: 10px;
+    border-bottom: .5px solid lightgray;
+    background: white;
+    z-index: 3;
+}
+.objects__header>h1{
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+.objects__list{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 200px;
+}
+
+@keyframes rotate-animation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{transform: rotate(360deg)}
+}

@@ -1,0 +1,72 @@
+.authentication {
+  width: 100%;
+  max-width: 500px;
+  height: 80vh;
+  background-color: white;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+.authentication > h1 {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+.authentication > small {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  color: gray;
+}
+
+.authentication__btn {
+  width: 60% !important;
+  text-transform: inherit !important;
+  cursor: pointer !important;
+  margin-top: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+}
+.authentication__icon {
+  color: white !important;
+  font-size: 30px !important;
+  margin-right: 40px !important;
+}
+.authentication__error {
+  text-transform: inherit !important;
+  font-style: italic;
+  text-align: center;
+  color: red !important;
+  letter-spacing: normal !important;
+}
+.authentication__googlebtn {
+  background-color: lightseagreen !important;
+}
+.authentication__facebookbtn {
+  background-color: #3a5ea2 !important;
+}
+.authentication__githubbtn {
+  background-color: #24292e !important;
+}
+.authentication__twitterbtn {
+  background-color: #1c9be8 !important;
+}
+.authentication__emailbtn {
+  background-color: orange !important;
+}
+.authentication__anonymousbtn {
+  background-color: #43ac6b !important;
+}
+.authentication__yahoobtn {
+  background-color: #412cbe !important;
+}
+/*  */

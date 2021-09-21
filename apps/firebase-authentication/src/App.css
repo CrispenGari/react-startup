@@ -1,0 +1,15 @@
+body {
+  background-color: #f1f3f4;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+.app__home,
+.app__authentication {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}

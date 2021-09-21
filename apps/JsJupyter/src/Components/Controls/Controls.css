@@ -1,0 +1,55 @@
+.controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3px auto;
+}
+.controls > p,
+.control__merged__container > p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: fit;
+  padding: 2px 8px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control__merged__container > p {
+  margin: 0 !important;
+  height: 25px;
+}
+.control__merged__container {
+  display: flex;
+  align-items: center;
+  width: fit;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  margin: 0px 5px;
+}
+.control__icon {
+  font-size: 15px;
+}
+.controls > p:hover,
+.control__merged__container > p:hover {
+  background: lightgray;
+}
+.control__merged__container:hover {
+  background: none !important;
+}
+.controls > select.control__select {
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 13px;
+}
+.controls > select.control__select:hover,
+.controls > select.control__select:active {
+  box-shadow: 3px 3px 3px 3px lightseagreen;
+}

@@ -1,0 +1,36 @@
+.header {
+  background: var(--header-color);
+  width: 100%;
+  display: flex;
+  position: sticky;
+  color: white;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+.header > h1 {
+  color: lightseagreen;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.header > h1::first-letter {
+  color: green;
+}
+.header__icon {
+  font-size: 40px !important;
+  animation: 2s linear infinite heart-animation;
+}
+@keyframes heart-animation {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}

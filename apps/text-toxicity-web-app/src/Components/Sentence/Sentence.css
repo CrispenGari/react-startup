@@ -1,0 +1,16 @@
+.sentence {
+  background-color: white;
+  border-radius: 3px;
+  border-bottom: 1px solid lightgrey;
+  user-select: none;
+  padding: 5px;
+  margin: 5px auto 10px auto;
+  width: 100%;
+  max-width: 500px;
+}
+.sentence > h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: red;
+  text-transform: capitalize;
+}

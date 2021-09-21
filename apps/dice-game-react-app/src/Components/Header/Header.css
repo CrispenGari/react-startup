@@ -1,0 +1,41 @@
+.header {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  widows: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  user-zoom: none;
+  user-select: none;
+  background: var(--body-color);
+  z-index: 10;
+}
+.header > .MuiSvgIcon-root {
+  color: lightseagreen;
+}
+.header > h1 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: lightseagreen;
+}
+.header > h1::first-letter {
+  color: green;
+}
+.header__theme {
+  display: flex;
+  align-items: center;
+}
+.header__theme > .MuiSvgIcon-root {
+  font-size: 20px;
+  margin: 0px 10px;
+}
+.header__theme > .MuiSvgIcon-root:first-child {
+  color: orange;
+}
+.header__theme > .MuiSvgIcon-root:last-child {
+  color: lightseagreen;
+}

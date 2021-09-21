@@ -1,0 +1,33 @@
+.face {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 1px 1px -1px -1px black;
+  background: #f5f5f5;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.face__dot {
+  width: 15px;
+  height: 15px;
+  background: #000000;
+  border-radius: 50%;
+}
+.face__2 > div,
+.face__4 > div,
+.face__3 > div,
+.face__5 > div,
+.face__6 > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.face__animation > img {
+  width: 170px;
+  object-fit: contain;
+  mask-image: invert(1);
+}

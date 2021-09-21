@@ -1,0 +1,44 @@
+.main {
+  flex: 0.8;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 40vh;
+  padding: 20px;
+}
+.main__waiting {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+.main__waiting > h1 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+}
+.main__waitingIcon {
+  animation: waiting infinite 2s;
+  color: orange;
+  font-size: 50px !important;
+}
+@keyframes waiting {
+  from {
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+/* @keyframes waiting {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,0 +1,41 @@
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.main__answers {
+}
+.main__loading {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  max-width: 500px;
+  height: 30vh;
+  margin: 5px auto;
+  user-select: none;
+}
+.main__loading > .MuiSvgIcon-root {
+  color: orange;
+  font-size: 50px;
+  animation: loading linear infinite 1s;
+}
+.main__loading > h1 {
+  color: lightseagreen;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  font-style: italic;
+  text-transform: lowercase;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

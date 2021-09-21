@@ -1,0 +1,35 @@
+.navbar{
+    overflow-y:  scroll;
+    overflow-x: hidden;
+    background-color: var(--header-color);
+    align-items: center ;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    user-select: none;
+    height: 100%;
+    flex: .15;
+}
+.navbar::-webkit-scrollbar{
+    display: none;
+}
+.navbar>h1{
+    font-size: 15px;
+    color: white;
+    width: 200px !important;
+    cursor: pointer;
+    text-transform: inherit;
+    margin-right: 10px;
+    letter-spacing: 2px ;
+    text-transform: uppercase;
+    cursor: pointer;
+     transition: transform 1ms ease-in-out;
+    padding: 10px 0;
+}
+.navbar>h1:hover{
+    transform: scale(1.09);
+    color: lightseagreen !important;
+}
+.navbar--active{
+    color: lightseagreen !important;
+}

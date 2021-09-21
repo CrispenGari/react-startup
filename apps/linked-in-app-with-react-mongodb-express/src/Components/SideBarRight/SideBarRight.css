@@ -1,0 +1,25 @@
+.sidebarRight {
+  flex: 0.3;
+  border: 1px solid lightgray;
+  margin-left: 10px;
+  border-radius: 5px;
+  max-height: 300px;
+  padding: 5px 10px;
+  background-color: white;
+}
+.sidebarRight__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.sidebarRight__top > .MuiSvgIcon-root {
+  color: gray;
+  cursor: pointer;
+  font-size: 16px;
+}
+.sidebarRight__bottom {
+  cursor: pointer;
+  color: var(--text-color2);
+  font-weight: 600;
+  margin-top: 30px;
+}

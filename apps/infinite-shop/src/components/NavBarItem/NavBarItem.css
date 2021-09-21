@@ -1,0 +1,19 @@
+.navbaritem {
+  margin: 5px;
+  cursor: pointer;
+}
+.navbaritem > h1 {
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: transform 100ms ease;
+}
+.navbaritem > h1:hover {
+  transform: scale(1.09);
+  color: orange;
+}
+.navbaritem--active {
+  color: lightseagreen !important;
+}

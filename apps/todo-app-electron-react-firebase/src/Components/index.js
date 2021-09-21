@@ -1,0 +1,8 @@
+export {default as Header } from './Header/Header'
+export {default as Footer } from './Footer/Footer'
+export {default as Main } from './Main/Main'
+export {default as Add } from './Add/Add'
+export {default as Todo } from './Todo/Todo'
+export {default as SideBar } from './SideBar/SideBar'
+export {default as SideBarItem } from './SideBarItem/SideBarItem'
+export {default as TodoList } from './TodoList/TodoList'
