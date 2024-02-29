@@ -961,7 +961,7 @@ Next we are going to learn how we can test our custom hooks. We are going to cre
 ```tsx
 import React from "react";
 const useCounter = ({ value = 1 }: { value?: number }) => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(value);
   const increment = () => setCount(count + value);
   const decrement = () => setCount(count - value);
   return {
@@ -976,28 +976,183 @@ export default useCounter;
 Now let's go ahead and test the functionality of this `hook`
 
 ```tsx
+import { renderHook } from "@testing-library/react";
+import useCounter from "./useCounter";
+import { act } from "react-dom/test-utils";
 
+describe("useCounter", () => {
+  test("the initial value of count to be 1", () => {
+    const { result } = renderHook(useCounter, { initialProps: {} });
+    expect(result.current.count).toBe(1);
+  });
+
+  test("set the initial count to 10", () => {
+    const { result } = renderHook(useCounter, {
+      initialProps: { value: 10 },
+    });
+    expect(result.current.count).toBe(10);
+  });
+
+  test("should increment the count", () => {
+    const { result } = renderHook(useCounter, { initialProps: {} });
+    act(() => result.current.increment());
+    expect(result.current.count).toBe(2);
+  });
+
+  test("should decrement the count", () => {
+    const { result } = renderHook(useCounter, { initialProps: {} });
+    act(() => result.current.decrement());
+    expect(result.current.count).toBe(0);
+  });
+});
 ```
+
+We are using the `act` function which is used to trigger functions in hooks. We are also using the `renderHook` instead of the `render` because we will be testing the functionality of a hook.
+
+### Mocking Functions
+
+We are going to create a new component called `Switch` and add the following code in it.
 
 ```tsx
-
+import React from "react";
+interface Props {
+  on?: () => void;
+  off?: () => void;
+  state: "on" | "off";
+}
+const Switch: React.FC<Props> = ({ on, off, state }) => {
+  return (
+    <div className="Switch">
+      <h1>{state}</h1>
+      {on && <button onClick={on}>ON</button>}
+      {off && <button onClick={off}>OFF</button>}
+    </div>
+  );
+};
+export default Switch;
 ```
+
+Let's mock the functions that will trigger `ON` and `OFF` button clicks. In the test file we are going to add the following:
 
 ```tsx
+import { render, screen } from "@testing-library/react";
+import Switch from "./Switch";
+import user from "@testing-library/user-event";
 
+describe("Switch", () => {
+  test("it renders", () => {
+    render(<Switch state="on" />);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    expect(h1).toBeInTheDocument();
+  });
+
+  test("all functions are being called", () => {
+    const onHandler = jest.fn();
+    const offHandler = jest.fn();
+    render(<Switch state="on" on={onHandler} off={offHandler} />);
+    const btn1 = screen.getByRole("button", { name: "ON" });
+    const btn2 = screen.getByRole("button", { name: "OFF" });
+    user.click(btn1);
+    user.click(btn2);
+    expect(onHandler).toHaveBeenCalledTimes(1);
+    expect(offHandler).toHaveBeenCalledTimes(1);
+  });
+});
 ```
+
+### Mocking HTTP requests
+
+Just like what we did during mocking request we also want to mock http request. First we are going to create a component called `Todo` and add the following code in it.
 
 ```tsx
+import React from "react";
 
+interface Props {}
+const Todo: React.FC<Props> = () => {
+  const [todo, setTodo] = React.useState([]);
+  const [error, setError] = React.useState("");
+
+  React.useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => setTodo(data.map((todo: any) => todo.title)))
+      .catch((err) => setError("Failed to fetch todos."));
+  });
+  return (
+    <div className="todo">
+      {error && <p>{error}</p>}
+      <ul>
+        {todo.map((todo) => (
+          <li key={todo}>{todo}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default Todo;
 ```
+
+Now we want to mock http request using [`MSW` Mock Service Worker](https://mswjs.io/). First of all we need to setup `msw` by running the following command:
+
+```shell
+yarn add -D msw@latest
+```
+
+Then we are going to create a file called `mocks/index.ts` and add the following code in it
 
 ```tsx
-
+import { setupServer } from "msw/node";
+import { handlers } from "./handlers";
+export const server = setupServer(...handlers);
 ```
+
+In our `handlers.ts` file we are going to add the following to it:
 
 ```tsx
+import { HttpResponse, http } from "msw";
 
+export const handlers = [
+  http.get("https://jsonplaceholder.typicode.com/todos", (resolver) => {
+    return HttpResponse.json(
+      [
+        {
+          title: "Cooking",
+        },
+        {
+          title: "Coding",
+        },
+        {
+          title: "Sleeping",
+        },
+      ],
+      { status: 200 }
+    );
+  }),
+];
 ```
+
+We are creating an http mock server that returns `todos` with a status code of `200` as json data. WE are using the `get` method and use the url that we have in our `Todo` component. You can read more about mocking http requests here: https://mswjs.io/docs/network-behavior/rest
+
+Next we are going to open the `setupTest.ts` file and add the following code in it:
+
+```tsx
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import "@testing-library/jest-dom";
+
+import { server } from "./mocks";
+// Establish API mocking before all tests.
+beforeAll(() => server.listen());
+// Reset any request handlers that we may add during the tests,
+// so they don't affect other tests.
+afterEach(() => server.resetHandlers());
+// Clean up after the tests are finished.
+afterAll(() => server.close());
+```
+
+Now we can go ahead and test our component in the `Todo.spec.tsx` file as follows:
 
 ```tsx
 
