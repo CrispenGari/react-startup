@@ -701,6 +701,336 @@ For that we can use the `findByRole` which returns a promise so we need to await
 15. `findAllByTitle`
 16. `findAllByTestId`
 
+### Manual Queries
+
+Sometimes you will want to select elements in the document, you can use the `querySelector` method on the container. The container is an object that is returned when you call the `render`. Here is an example:
+
+```ts
+test("renders UL", async () => {
+  const { container } = render(<List items={languages} />);
+  const ul = container.querySelector("form>ul");
+  expect(ul).toBeInTheDocument();
+});
+```
+
+### Debugging
+
+Sometimes you will want to debug your test. There are many ways of doing this. Here are the different ways that you can use to debug your tests in react.
+
+```tsx
+test("renders Hello button will eventually renders", async () => {
+  render(<List items={languages} />);
+  screen.debug();
+  const btn = await screen.findByRole(
+    "button",
+    { name: "Login" },
+    { timeout: 1001 }
+  );
+  screen.debug();
+  expect(btn).toBeInTheDocument();
+});
+```
+
+Wrapping your selector elements with the `screen.debug();` methods helps you to get the document tree of a component in the console. You can also use the method called `logRoles` or `logDom` to debug your component. The following example show how you can do that:
+
+```ts
+test("renders Hello button will eventually renders", async () => {
+  const view = render(<List items={languages} />);
+  logRoles(view.container);
+  const btn = await screen.findByRole(
+    "button",
+    { name: "Login" },
+    { timeout: 1001 }
+  );
+  logDOM(btn);
+  expect(btn).toBeInTheDocument();
+});
+```
+
+You will be able to see a list of `roles` for each element in the document where you can select them nicely. Another this is to use a chrome extension called [Testing Playground](https://chromewebstore.google.com/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano). You can install it and then start your react app. If you inspect the document it will give you some nice selection of elements.
+
+1. click inspect
+2. then select testing playground
+3. then you can hover over elements, then it will give you nice selection code for those elements in-order of their priority. Here is a simple demonstration on that.
+
+```tsx
+screen.getByRole("link", {
+  name: /learn react/i,
+});
+```
+
+### User Interactions
+
+User interactions allows us to interact with our components during testing. In this section we are going to learn about some usefull user interaction methods like `clicking` the button .etc. Let's create a component called `Counter` and and the following code in it:
+
+```tsx
+import React from "react";
+
+interface Props {}
+const Counter: React.FC<Props> = () => {
+  const [count, setCount] = React.useState(0);
+  return (
+    <div className="counter">
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+export default Counter;
+```
+
+Here is our basic components that changes the count wen the button increment is clicked. Now let's write a test for this
+
+```tsx
+describe("Counter", () => {
+  test("renders correctly", () => {
+    render(<Counter />);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    const btn = screen.getByRole("button");
+    expect(h1).toBeInTheDocument();
+    expect(btn).toBeInTheDocument();
+  });
+
+  test("initial state is 0", () => {
+    render(<Counter />);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    expect(h1).toHaveTextContent("0");
+  });
+  test("increment button change state t0 1", () => {
+    render(<Counter />);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    const btn = screen.getByRole("button");
+    user.click(btn, {});
+    expect(h1).toHaveTextContent("1");
+  });
+});
+```
+
+Let's modify our Count components so that we can accept user input that will let us increment by that value when it is typed in the textbox. Here is how we can do that:
+
+```tsx
+import React from "react";
+
+interface Props {}
+const Counter: React.FC<Props> = () => {
+  const [count, setCount] = React.useState(0);
+  const [amount, setAmount] = React.useState(0);
+  return (
+    <div className="counter">
+      <h1>{count}</h1>
+      <input
+        type="text"
+        value={amount}
+        onChange={(e) => setAmount(parseInt(e.target.value))}
+      />
+      <button onClick={() => setCount(amount)}>Set</button>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+Next we are going to use user events to type in the textbox a value of `10` and test that.
+
+```tsx
+test("renders input correctly and the Set Button", () => {
+  render(<Counter />);
+  const input = screen.getByRole("textbox");
+  const btn = screen.getByRole("button", { name: "Set" });
+  expect(input).toBeInTheDocument();
+  expect(btn).toBeInTheDocument();
+});
+
+test("changes the count to 10 after the Set button is clicked", () => {
+  render(<Counter />);
+  const input = screen.getByRole("textbox");
+  const btn = screen.getByRole("button", { name: "Set" });
+  const h1 = screen.getByRole("heading", { level: 1 });
+  user.type(input, "10");
+  user.click(btn, {});
+  expect(h1).toHaveTextContent("10");
+});
+```
+
+Here are some of the list of events that we have:
+
+1. Pointer events
+   1. `click`
+   2. `dblClick`
+   3. `tripleClick`
+   4. `hover`
+   5. `unhover`
+2. Keyboard Events
+
+   1. `clear()` -clear text inputs
+   2. `selectOptions` - selection of a list box or options in a select
+   3. `deselectOptions` - deselection of options
+   4. `upload` - uploading a file
+   5. `type` -typing in an input
+   6. `tab` - tab pressing
+
+3. Clipboard Events
+   1. `copy`
+   2. `paste`
+   3. `cut`
+
+### Providers
+
+In this section we are going to learn how we can test some Providers. We are going to create a provider called `ThemeProvider` that will provide a theme to our app.
+
+```tsx
+import React from "react";
+
+interface Props {
+  children: React.ReactElement;
+  theme?: "dark" | "light";
+}
+const ThemeProvider: React.FC<Props> = ({ children, theme = "light" }) => {
+  return (
+    <div
+      style={
+        theme === "dark"
+          ? {
+              backgroundColor: "black",
+              color: "white",
+            }
+          : { backgroundColor: "white", color: "black" }
+      }
+    >
+      {children}
+    </div>
+  );
+};
+export default ThemeProvider;
+```
+
+Here is our `ThemeProvider` that will wrap every component that requires a theme. Here is how we can test if the `ThemeProvider` is actually working for our components.
+
+```tsx
+import { render, screen } from "@testing-library/react";
+import ThemeProvider from "./ThemeProvider";
+
+describe("ThemeProvider", () => {
+  test("renders text correctly", () => {
+    render(<h1>Hello Dark</h1>, { wrapper: ThemeProvider });
+    const headingElement = screen.getByRole("heading");
+    expect(headingElement).toHaveStyle({ color: "black;" });
+  });
+});
+```
+
+We are using the `wrapper` to tell `RTL` that we want to wrap our component with `ThemeProvider`. We can create our custom reader following the docs https://testing-library.com/docs/react-testing-library/setup. First we need to create a file called `test-utils.tsx` in the `src` folder and add the following code to it:
+
+```tsx
+import React, { ReactElement } from "react";
+import { render, RenderOptions } from "@testing-library/react";
+import ThemeProvider from "./ThemeProvider/ThemeProvider";
+
+const AllTheProviders = ({ children }: { children: React.ReactElement }) => {
+  return <ThemeProvider theme="light">{children}</ThemeProvider>;
+};
+
+const customRender = (
+  ui: ReactElement,
+  options?: Omit<RenderOptions, "wrapper">
+) => render(ui, { wrapper: AllTheProviders, ...options });
+
+export * from "@testing-library/react";
+export { customRender as render };
+```
+
+After that we can just import our `screen` and `render` from `test-utils.tsx` file as follows and stop using the `Wrapper` component.
+
+```tsx
+import { render, screen } from "../test-utils";
+describe("ThemeProvider", () => {
+  test("renders text correctly", () => {
+    render(<h1>Hello Dark</h1>);
+    const headingElement = screen.getByRole("heading");
+    expect(headingElement).toHaveStyle({ color: "black;" });
+  });
+});
+```
+
+### Testing Custom Hooks
+
+Next we are going to learn how we can test our custom hooks. We are going to create a custom hook called `useCounter` and we are going to add the following code in it.
+
+```tsx
+import React from "react";
+const useCounter = ({ value = 1 }: { value?: number }) => {
+  const [count, setCount] = React.useState(0);
+  const increment = () => setCount(count + value);
+  const decrement = () => setCount(count - value);
+  return {
+    count,
+    increment,
+    decrement,
+  };
+};
+export default useCounter;
+```
+
+Now let's go ahead and test the functionality of this `hook`
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
+```tsx
+
+```
+
 ### Refs
 
 1. [Jest-Dom](https://github.com/testing-library/jest-dom?tab=readme-ov-file#tohaveclass)

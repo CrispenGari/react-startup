@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, logRoles, logDOM } from "@testing-library/react";
 import List from "./List";
 
 describe("List", () => {
@@ -23,12 +23,14 @@ describe("List", () => {
     expect(btn).toBeInTheDocument();
   });
   test("renders Hello button will eventually renders", async () => {
-    render(<List items={languages} />);
+    const view = render(<List items={languages} />);
+    logRoles(view.container);
     const btn = await screen.findByRole(
       "button",
       { name: "Login" },
       { timeout: 1001 }
     );
+    logDOM(btn);
     expect(btn).toBeInTheDocument();
   });
 });
