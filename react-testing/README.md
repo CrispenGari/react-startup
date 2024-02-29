@@ -61,10 +61,10 @@ Let's create our very first components and test them out. For that we are going 
 In our `Button.tsx` we are going to have the following code in it:
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {
   title: string;
-  color: "primary" | "secondary" | "default";
+  color: 'primary' | 'secondary' | 'default';
 }
 const Button: React.FC<Props> = ({ title, color }) => {
   return <button className={`button ${color}`}>{title}</button>;
@@ -76,22 +76,22 @@ export default Button;
 To write some test of this button we are going to go to the ` Button.test.tsx` and ddd the following code in it.
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import { render, screen } from '@testing-library/react';
+import Button from './Button';
 
-test("Testing Default Button", () => {
+test('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
-  const element = screen.getByText("Default", { trim: true });
+  const element = screen.getByText('Default', { trim: true });
   expect(element).toContainElement(element);
 });
-test("Testing Primary Button", () => {
+test('Testing Primary Button', () => {
   render(<Button color="primary" title="Primary" />);
-  const element = screen.getByText("Primary", { trim: true });
+  const element = screen.getByText('Primary', { trim: true });
   expect(element).toContainElement(element);
 });
-test("Testing Secondary Button", () => {
+test('Testing Secondary Button', () => {
   render(<Button color="secondary" title="Secondary" />);
-  const element = screen.getByText("Secondary", { trim: true });
+  const element = screen.getByText('Secondary', { trim: true });
   expect(element).toContainElement(element);
 });
 ```
@@ -99,22 +99,22 @@ test("Testing Secondary Button", () => {
 Here we are just testing if the button contains the title that we specify. We are using the `screen.getByText` to get the element that has the text of the title passed as props. We can replace `test` with `it` method and it will work exactly the same here is an example:
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import { render, screen } from '@testing-library/react';
+import Button from './Button';
 
-it("Testing Default Button", () => {
+it('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
-  const element = screen.getByText("Default", { trim: true });
+  const element = screen.getByText('Default', { trim: true });
   expect(element).toContainElement(element);
 });
-it("Testing Primary Button", () => {
+it('Testing Primary Button', () => {
   render(<Button color="primary" title="Primary" />);
-  const element = screen.getByText("Primary", { trim: true });
+  const element = screen.getByText('Primary', { trim: true });
   expect(element).toContainElement(element);
 });
-it("Testing Secondary Button", () => {
+it('Testing Secondary Button', () => {
   render(<Button color="secondary" title="Secondary" />);
-  const element = screen.getByText("Secondary", { trim: true });
+  const element = screen.getByText('Secondary', { trim: true });
   expect(element).toContainElement(element);
 });
 ```
@@ -122,7 +122,7 @@ it("Testing Secondary Button", () => {
 We can also use regular expression to match elements, here is an example.
 
 ```tsx
-it("Testing Default Button", () => {
+it('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
   const element = screen.getByText(/default/i, { trim: true });
   expect(element).toContainElement(element);
@@ -132,15 +132,15 @@ it("Testing Default Button", () => {
 We can also skip some test in the `test suite` (file). Here is how we can do it using the `it` method.
 
 ```tsx
-xit("Testing Default Button", () => {
+xit('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
   const element = screen.getByText(/default/i, { trim: true });
   expect(element).toContainElement(element);
 });
 // or
-it.skip("Testing Secondary Button", () => {
+it.skip('Testing Secondary Button', () => {
   render(<Button color="secondary" title="Secondary" />);
-  const element = screen.getByText("Secondary", { trim: true });
+  const element = screen.getByText('Secondary', { trim: true });
   expect(element).toContainElement(element);
 });
 ```
@@ -148,7 +148,7 @@ it.skip("Testing Secondary Button", () => {
 You can do this using the `test` method as follows.
 
 ```tsx
-test.skip("Testing Default Button", () => {
+test.skip('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
   const element = screen.getByText(/default/i, { trim: true });
   expect(element).toContainElement(element);
@@ -158,7 +158,7 @@ test.skip("Testing Default Button", () => {
 We can use the `only` method to run only that test in the file. Here is how we can do it using the `test` method.
 
 ```tsx
-test.only("Testing Default Button", () => {
+test.only('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
   const element = screen.getByText(/default/i, { trim: true });
   expect(element).toContainElement(element);
@@ -168,15 +168,15 @@ test.only("Testing Default Button", () => {
 Or using the `it` method as follows:
 
 ```tsx
-fit("Testing Default Button", () => {
+fit('Testing Default Button', () => {
   render(<Button color="default" title="Default" />);
   const element = screen.getByText(/default/i, { trim: true });
   expect(element).toContainElement(element);
 });
 // or
-it.only("Testing Primary Button", () => {
+it.only('Testing Primary Button', () => {
   render(<Button color="primary" title="Primary" />);
-  const element = screen.getByText("Primary", { trim: true });
+  const element = screen.getByText('Primary', { trim: true });
   expect(element).toContainElement(element);
 });
 ```
@@ -184,24 +184,24 @@ it.only("Testing Primary Button", () => {
 We can group the tests using the `describe` method in a test suite. let's group our test together.
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import { render, screen } from '@testing-library/react';
+import Button from './Button';
 
-describe("Button", () => {
-  test("Testing Default", () => {
+describe('Button', () => {
+  test('Testing Default', () => {
     render(<Button color="default" title="Default" />);
     const element = screen.getByText(/default/i, { trim: true });
     expect(element).toContainElement(element);
   });
-  describe("None Default", () => {
-    test("Testing Primary", () => {
+  describe('None Default', () => {
+    test('Testing Primary', () => {
       render(<Button color="primary" title="Primary" />);
-      const element = screen.getByText("Primary", { trim: true });
+      const element = screen.getByText('Primary', { trim: true });
       expect(element).toContainElement(element);
     });
-    test("Testing Secondary", () => {
+    test('Testing Secondary', () => {
       render(<Button color="secondary" title="Secondary" />);
-      const element = screen.getByText("Secondary", { trim: true });
+      const element = screen.getByText('Secondary', { trim: true });
       expect(element).toContainElement(element);
     });
   });
@@ -326,7 +326,7 @@ In this section we are going to cover some query functions that we can use to se
 > Note that when you are calling these methods we should have exactly one element that matches the query. If there two or more elements we will get an error. let's say we have the following component `Login`
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {}
 const Login: React.FC<Props> = () => {
   return (
@@ -353,23 +353,23 @@ export default Login;
 We can use the `getByRole` to test if the component renders correctly.
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Login from "./Login";
+import { render, screen } from '@testing-library/react';
+import Login from './Login';
 
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByRole
-    const input = screen.getByRole("textbox", { name: "Name" });
+    const input = screen.getByRole('textbox', { name: 'Name' });
     expect(input).toBeInTheDocument();
-    const textarea = screen.getByRole("textbox", { name: "Bio" });
+    const textarea = screen.getByRole('textbox', { name: 'Bio' });
     expect(textarea).toBeInTheDocument();
 
-    const h1 = screen.getByRole("heading", { level: 1 }); // level 1 for an h1
-    const h2 = screen.getByRole("heading", { level: 2 });
+    const h1 = screen.getByRole('heading', { level: 1 }); // level 1 for an h1
+    const h2 = screen.getByRole('heading', { level: 2 });
     expect(h1).toBeInTheDocument();
     expect(h2).toBeInTheDocument();
-    const btn = screen.getByRole("button", { name: "Login" });
+    const btn = screen.getByRole('button', { name: 'Login' });
     expect(btn).toBeInTheDocument();
   });
 });
@@ -378,11 +378,11 @@ describe("Login", () => {
 We can use the `getByLabelText` instead of the `getByRole` to get the elements that have a `label` tag as follows:
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByLabelText
-    const input = screen.getByLabelText("Name", { selector: "input" });
+    const input = screen.getByLabelText('Name', { selector: 'input' });
     expect(input).toBeInTheDocument();
     const textarea = screen.getByLabelText(/bio/i);
     expect(textarea).toBeInTheDocument();
@@ -393,8 +393,8 @@ describe("Login", () => {
 We can use the `getByPlaceholderText` to get the textiput that have a placeholder `Full Name`
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByPlaceholderText
     const input = screen.getByPlaceholderText(/full name/i);
@@ -413,7 +413,7 @@ Next we are going to use the `getByDisplayValue` from a text input. First we wil
     name="name"
     id="name"
     placeholder="Full Name"
-    value={"John Doe"}
+    value={'John Doe'}
     onChange={() => {}}
   />
 </div>
@@ -422,8 +422,8 @@ Next we are going to use the `getByDisplayValue` from a text input. First we wil
 Now we can get the element as follows:
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByDisplayValue
     const input = screen.getByDisplayValue(/doe$/i);
@@ -435,8 +435,8 @@ describe("Login", () => {
 The `getByAltText` is used to get elements on the dom that takes `alt` as prop. Let's grab the image by alt text we can do it as follows:
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByAltText
     const imh = screen.getByAltText(/logo/i);
@@ -454,8 +454,8 @@ The `getByTitle` is used to access elements that have a title. Let's modify our 
 Now we can get this button as follows;
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByTitle
     const btn = screen.getByTitle(/login/i);
@@ -473,8 +473,8 @@ The `getByTestId` is used to access elements that has an attribute `data-testid`
 Now we can access the button as follows:
 
 ```tsx
-describe("Login", () => {
-  test("renders", () => {
+describe('Login', () => {
+  test('renders', () => {
     render(<Login />);
     // getByTestId
     const btn = screen.getByTestId(/login button/i);
@@ -523,7 +523,7 @@ However we can get elements instead of `one` using the following similar methods
 These methods works the same so i will demonstrate a single method `getAllByRole` in getting ui elements in the component called `List`
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {
   items: string[];
 }
@@ -544,15 +544,15 @@ export default List;
 We can test this component as follows:
 
 ```tsx
-describe("List", () => {
-  const languages = ["Java", "TypeScript", "Python", "C++"];
-  test("renders correctly", () => {
+describe('List', () => {
+  const languages = ['Java', 'TypeScript', 'Python', 'C++'];
+  test('renders correctly', () => {
     render(<List items={languages} />);
-    expect(screen.getByRole("list")).toBeInTheDocument();
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
-  test("renders languages", () => {
+  test('renders languages', () => {
     render(<List items={languages} />);
-    const langs = screen.getAllByRole("listitem");
+    const langs = screen.getAllByRole('listitem');
     expect(langs.length).toEqual(langs.length);
   });
 });
@@ -564,7 +564,7 @@ describe("List", () => {
 Let's modify our `List` component to:
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {
   items: string[];
 }
@@ -580,7 +580,7 @@ const List: React.FC<Props> = ({ items }) => {
       {!!user ? (
         <button>Hello</button>
       ) : (
-        <button onClick={() => setUser("Hi")}>Login</button>
+        <button onClick={() => setUser('Hi')}>Login</button>
       )}
     </>
   );
@@ -591,25 +591,25 @@ export default List;
 Let's write the test if the buttons are rendered correctly. We want to check if the `Login` button will be rendered and the `Hello` if it is hidden.
 
 ```tsx
-describe("List", () => {
-  const languages = ["Java", "TypeScript", "Python", "C++"];
-  test("renders correctly", () => {
+describe('List', () => {
+  const languages = ['Java', 'TypeScript', 'Python', 'C++'];
+  test('renders correctly', () => {
     render(<List items={languages} />);
-    expect(screen.getByRole("list")).toBeInTheDocument();
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
-  test("renders languages", () => {
+  test('renders languages', () => {
     render(<List items={languages} />);
-    const langs = screen.getAllByRole("listitem");
+    const langs = screen.getAllByRole('listitem');
     expect(langs.length).toEqual(langs.length);
   });
-  test("renders hidden Hello button", () => {
+  test('renders hidden Hello button', () => {
     render(<List items={languages} />);
-    const btn = screen.queryByRole("button", { name: "Hello" });
+    const btn = screen.queryByRole('button', { name: 'Hello' });
     expect(btn).not.toBeInTheDocument();
   });
-  test("renders Login button", () => {
+  test('renders Login button', () => {
     render(<List items={languages} />);
-    const btn = screen.getByRole("button", { name: "Login" });
+    const btn = screen.getByRole('button', { name: 'Login' });
     expect(btn).toBeInTheDocument();
   });
 });
@@ -638,7 +638,7 @@ describe("List", () => {
 Let's modify our `List` component to:
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {
   items: string[];
 }
@@ -646,7 +646,7 @@ const List: React.FC<Props> = ({ items }) => {
   const [user, setUser] = React.useState<string | undefined>(undefined);
   React.useEffect(() => {
     const id = setTimeout(() => {
-      setUser("hello");
+      setUser('hello');
     }, 1001);
     return () => clearTimeout(id);
   }, []);
@@ -660,7 +660,7 @@ const List: React.FC<Props> = ({ items }) => {
       {!!user ? (
         <button>Hello</button>
       ) : (
-        <button onClick={() => setUser("Hi")}>Login</button>
+        <button onClick={() => setUser('Hi')}>Login</button>
       )}
     </>
   );
@@ -671,11 +671,11 @@ export default List;
 As you can see the `Hello` button will render after `1001ms` so we want to test for that case, let's add that test function.
 
 ```tsx
-test("renders Hello button will eventually renders", async () => {
+test('renders Hello button will eventually renders', async () => {
   render(<List items={languages} />);
   const btn = await screen.findByRole(
-    "button",
-    { name: "Login" },
+    'button',
+    { name: 'Login' },
     { timeout: 1001 },
   );
   expect(btn).toBeInTheDocument();
@@ -718,12 +718,12 @@ test("renders UL", async () => {
 Sometimes you will want to debug your test. There are many ways of doing this. Here are the different ways that you can use to debug your tests in react.
 
 ```tsx
-test("renders Hello button will eventually renders", async () => {
+test('renders Hello button will eventually renders', async () => {
   render(<List items={languages} />);
   screen.debug();
   const btn = await screen.findByRole(
-    "button",
-    { name: "Login" },
+    'button',
+    { name: 'Login' },
     { timeout: 1001 },
   );
   screen.debug();
@@ -754,7 +754,7 @@ You will be able to see a list of `roles` for each element in the document where
 3. then you can hover over elements, then it will give you nice selection code for those elements in-order of their priority. Here is a simple demonstration on that.
 
 ```tsx
-screen.getByRole("link", {
+screen.getByRole('link', {
   name: /learn react/i,
 });
 ```
@@ -764,7 +764,7 @@ screen.getByRole("link", {
 User interactions allows us to interact with our components during testing. In this section we are going to learn about some usefull user interaction methods like `clicking` the button .etc. Let's create a component called `Counter` and and the following code in it:
 
 ```tsx
-import React from "react";
+import React from 'react';
 
 interface Props {}
 const Counter: React.FC<Props> = () => {
@@ -782,26 +782,26 @@ export default Counter;
 Here is our basic components that changes the count wen the button increment is clicked. Now let's write a test for this
 
 ```tsx
-describe("Counter", () => {
-  test("renders correctly", () => {
+describe('Counter', () => {
+  test('renders correctly', () => {
     render(<Counter />);
-    const h1 = screen.getByRole("heading", { level: 1 });
-    const btn = screen.getByRole("button");
+    const h1 = screen.getByRole('heading', { level: 1 });
+    const btn = screen.getByRole('button');
     expect(h1).toBeInTheDocument();
     expect(btn).toBeInTheDocument();
   });
 
-  test("initial state is 0", () => {
+  test('initial state is 0', () => {
     render(<Counter />);
-    const h1 = screen.getByRole("heading", { level: 1 });
-    expect(h1).toHaveTextContent("0");
+    const h1 = screen.getByRole('heading', { level: 1 });
+    expect(h1).toHaveTextContent('0');
   });
-  test("increment button change state t0 1", () => {
+  test('increment button change state t0 1', () => {
     render(<Counter />);
-    const h1 = screen.getByRole("heading", { level: 1 });
-    const btn = screen.getByRole("button");
+    const h1 = screen.getByRole('heading', { level: 1 });
+    const btn = screen.getByRole('button');
     user.click(btn, {});
-    expect(h1).toHaveTextContent("1");
+    expect(h1).toHaveTextContent('1');
   });
 });
 ```
@@ -809,7 +809,7 @@ describe("Counter", () => {
 Let's modify our Count components so that we can accept user input that will let us increment by that value when it is typed in the textbox. Here is how we can do that:
 
 ```tsx
-import React from "react";
+import React from 'react';
 
 interface Props {}
 const Counter: React.FC<Props> = () => {
@@ -835,22 +835,22 @@ export default Counter;
 Next we are going to use user events to type in the textbox a value of `10` and test that.
 
 ```tsx
-test("renders input correctly and the Set Button", () => {
+test('renders input correctly and the Set Button', () => {
   render(<Counter />);
-  const input = screen.getByRole("textbox");
-  const btn = screen.getByRole("button", { name: "Set" });
+  const input = screen.getByRole('textbox');
+  const btn = screen.getByRole('button', { name: 'Set' });
   expect(input).toBeInTheDocument();
   expect(btn).toBeInTheDocument();
 });
 
-test("changes the count to 10 after the Set button is clicked", () => {
+test('changes the count to 10 after the Set button is clicked', () => {
   render(<Counter />);
-  const input = screen.getByRole("textbox");
-  const btn = screen.getByRole("button", { name: "Set" });
-  const h1 = screen.getByRole("heading", { level: 1 });
-  user.type(input, "10");
+  const input = screen.getByRole('textbox');
+  const btn = screen.getByRole('button', { name: 'Set' });
+  const h1 = screen.getByRole('heading', { level: 1 });
+  user.type(input, '10');
   user.click(btn, {});
-  expect(h1).toHaveTextContent("10");
+  expect(h1).toHaveTextContent('10');
 });
 ```
 
@@ -881,22 +881,22 @@ Here are some of the list of events that we have:
 In this section we are going to learn how we can test some Providers. We are going to create a provider called `ThemeProvider` that will provide a theme to our app.
 
 ```tsx
-import React from "react";
+import React from 'react';
 
 interface Props {
   children: React.ReactElement;
-  theme?: "dark" | "light";
+  theme?: 'dark' | 'light';
 }
-const ThemeProvider: React.FC<Props> = ({ children, theme = "light" }) => {
+const ThemeProvider: React.FC<Props> = ({ children, theme = 'light' }) => {
   return (
     <div
       style={
-        theme === "dark"
+        theme === 'dark'
           ? {
-              backgroundColor: "black",
-              color: "white",
+              backgroundColor: 'black',
+              color: 'white',
             }
-          : { backgroundColor: "white", color: "black" }
+          : { backgroundColor: 'white', color: 'black' }
       }
     >
       {children}
@@ -909,14 +909,14 @@ export default ThemeProvider;
 Here is our `ThemeProvider` that will wrap every component that requires a theme. Here is how we can test if the `ThemeProvider` is actually working for our components.
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import ThemeProvider from "./ThemeProvider";
+import { render, screen } from '@testing-library/react';
+import ThemeProvider from './ThemeProvider';
 
-describe("ThemeProvider", () => {
-  test("renders text correctly", () => {
+describe('ThemeProvider', () => {
+  test('renders text correctly', () => {
     render(<h1>Hello Dark</h1>, { wrapper: ThemeProvider });
-    const headingElement = screen.getByRole("heading");
-    expect(headingElement).toHaveStyle({ color: "black;" });
+    const headingElement = screen.getByRole('heading');
+    expect(headingElement).toHaveStyle({ color: 'black;' });
   });
 });
 ```
@@ -924,9 +924,9 @@ describe("ThemeProvider", () => {
 We are using the `wrapper` to tell `RTL` that we want to wrap our component with `ThemeProvider`. We can create our custom reader following the docs https://testing-library.com/docs/react-testing-library/setup. First we need to create a file called `test-utils.tsx` in the `src` folder and add the following code to it:
 
 ```tsx
-import React, { ReactElement } from "react";
-import { render, RenderOptions } from "@testing-library/react";
-import ThemeProvider from "./ThemeProvider/ThemeProvider";
+import React, { ReactElement } from 'react';
+import { render, RenderOptions } from '@testing-library/react';
+import ThemeProvider from './ThemeProvider/ThemeProvider';
 
 const AllTheProviders = ({ children }: { children: React.ReactElement }) => {
   return <ThemeProvider theme="light">{children}</ThemeProvider>;
@@ -934,22 +934,22 @@ const AllTheProviders = ({ children }: { children: React.ReactElement }) => {
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">,
+  options?: Omit<RenderOptions, 'wrapper'>,
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 export { customRender as render };
 ```
 
 After that we can just import our `screen` and `render` from `test-utils.tsx` file as follows and stop using the `Wrapper` component.
 
 ```tsx
-import { render, screen } from "../test-utils";
-describe("ThemeProvider", () => {
-  test("renders text correctly", () => {
+import { render, screen } from '../test-utils';
+describe('ThemeProvider', () => {
+  test('renders text correctly', () => {
     render(<h1>Hello Dark</h1>);
-    const headingElement = screen.getByRole("heading");
-    expect(headingElement).toHaveStyle({ color: "black;" });
+    const headingElement = screen.getByRole('heading');
+    expect(headingElement).toHaveStyle({ color: 'black;' });
   });
 });
 ```
@@ -959,7 +959,7 @@ describe("ThemeProvider", () => {
 Next we are going to learn how we can test our custom hooks. We are going to create a custom hook called `useCounter` and we are going to add the following code in it.
 
 ```tsx
-import React from "react";
+import React from 'react';
 const useCounter = ({ value = 1 }: { value?: number }) => {
   const [count, setCount] = React.useState(value);
   const increment = () => setCount(count + value);
@@ -976,30 +976,30 @@ export default useCounter;
 Now let's go ahead and test the functionality of this `hook`
 
 ```tsx
-import { renderHook } from "@testing-library/react";
-import useCounter from "./useCounter";
-import { act } from "react-dom/test-utils";
+import { renderHook } from '@testing-library/react';
+import useCounter from './useCounter';
+import { act } from 'react-dom/test-utils';
 
-describe("useCounter", () => {
-  test("the initial value of count to be 1", () => {
+describe('useCounter', () => {
+  test('the initial value of count to be 1', () => {
     const { result } = renderHook(useCounter, { initialProps: {} });
     expect(result.current.count).toBe(1);
   });
 
-  test("set the initial count to 10", () => {
+  test('set the initial count to 10', () => {
     const { result } = renderHook(useCounter, {
       initialProps: { value: 10 },
     });
     expect(result.current.count).toBe(10);
   });
 
-  test("should increment the count", () => {
+  test('should increment the count', () => {
     const { result } = renderHook(useCounter, { initialProps: {} });
     act(() => result.current.increment());
     expect(result.current.count).toBe(2);
   });
 
-  test("should decrement the count", () => {
+  test('should decrement the count', () => {
     const { result } = renderHook(useCounter, { initialProps: {} });
     act(() => result.current.decrement());
     expect(result.current.count).toBe(0);
@@ -1014,11 +1014,11 @@ We are using the `act` function which is used to trigger functions in hooks. We 
 We are going to create a new component called `Switch` and add the following code in it.
 
 ```tsx
-import React from "react";
+import React from 'react';
 interface Props {
   on?: () => void;
   off?: () => void;
-  state: "on" | "off";
+  state: 'on' | 'off';
 }
 const Switch: React.FC<Props> = ({ on, off, state }) => {
   return (
@@ -1035,23 +1035,23 @@ export default Switch;
 Let's mock the functions that will trigger `ON` and `OFF` button clicks. In the test file we are going to add the following:
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Switch from "./Switch";
-import user from "@testing-library/user-event";
+import { render, screen } from '@testing-library/react';
+import Switch from './Switch';
+import user from '@testing-library/user-event';
 
-describe("Switch", () => {
-  test("it renders", () => {
+describe('Switch', () => {
+  test('it renders', () => {
     render(<Switch state="on" />);
-    const h1 = screen.getByRole("heading", { level: 1 });
+    const h1 = screen.getByRole('heading', { level: 1 });
     expect(h1).toBeInTheDocument();
   });
 
-  test("all functions are being called", () => {
+  test('all functions are being called', () => {
     const onHandler = jest.fn();
     const offHandler = jest.fn();
     render(<Switch state="on" on={onHandler} off={offHandler} />);
-    const btn1 = screen.getByRole("button", { name: "ON" });
-    const btn2 = screen.getByRole("button", { name: "OFF" });
+    const btn1 = screen.getByRole('button', { name: 'ON' });
+    const btn2 = screen.getByRole('button', { name: 'OFF' });
     user.click(btn1);
     user.click(btn2);
     expect(onHandler).toHaveBeenCalledTimes(1);
@@ -1065,18 +1065,18 @@ describe("Switch", () => {
 Just like what we did during mocking request we also want to mock http request. First we are going to create a component called `Todo` and add the following code in it.
 
 ```tsx
-import React from "react";
+import React from 'react';
 
 interface Props {}
 const Todo: React.FC<Props> = () => {
   const [todo, setTodo] = React.useState([]);
-  const [error, setError] = React.useState("");
+  const [error, setError] = React.useState('');
 
   React.useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
+    fetch('https://jsonplaceholder.typicode.com/todos')
       .then((res) => res.json())
       .then((data) => setTodo(data.map((todo: any) => todo.title)))
-      .catch((err) => setError("Failed to fetch todos."));
+      .catch((err) => setError('Failed to fetch todos.'));
   }, []);
   return (
     <div className="todo">
@@ -1101,28 +1101,28 @@ yarn add -D msw@latest
 Then we are going to create a file called `mocks/index.ts` and add the following code in it
 
 ```tsx
-import { setupServer } from "msw/node";
-import { handlers } from "./handlers";
+import { setupServer } from 'msw/node';
+import { handlers } from './handlers';
 export const server = setupServer(...handlers);
 ```
 
 In our `handlers.ts` file we are going to add the following to it:
 
 ```tsx
-import { HttpResponse, http } from "msw";
+import { HttpResponse, http } from 'msw';
 
 export const handlers = [
-  http.get("https://jsonplaceholder.typicode.com/todos", (resolver) => {
+  http.get('https://jsonplaceholder.typicode.com/todos', (resolver) => {
     return HttpResponse.json(
       [
         {
-          title: "Cooking",
+          title: 'Cooking',
         },
         {
-          title: "Coding",
+          title: 'Coding',
         },
         {
-          title: "Sleeping",
+          title: 'Sleeping',
         },
       ],
       { status: 200 },
@@ -1140,9 +1140,9 @@ Next we are going to open the `setupTest.ts` file and add the following code in 
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
-import { server } from "./mocks";
+import { server } from './mocks';
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
 // Reset any request handlers that we may add during the tests,
@@ -1155,15 +1155,15 @@ afterAll(() => server.close());
 We will need to create a file called `jest.polyfills.ts` and add the following to this file because we are using `mwc` version `2`:
 
 ```ts
-import { TextDecoder, TextEncoder } from "node:util";
+import { TextDecoder, TextEncoder } from 'node:util';
 // eslint-disable-next-line no-undef
 Object.defineProperties(globalThis, {
   TextDecoder: { value: TextDecoder },
   TextEncoder: { value: TextEncoder },
 });
 
-const { Blob, File } = require("node:buffer");
-const { fetch, Headers, FormData, Request, Response } = require("undici");
+const { Blob, File } = require('node:buffer');
+const { fetch, Headers, FormData, Request, Response } = require('undici');
 // eslint-disable-next-line no-undef
 Object.defineProperties(globalThis, {
   fetch: { value: fetch, writable: true },
@@ -1213,7 +1213,7 @@ yarn add -D @craco/craco @craco/types
 We are then going to create a `craco.config.ts` and add the following configuration:
 
 ```ts
-import { CracoConfig } from "@craco/types";
+import { CracoConfig } from '@craco/types';
 
 const cracoConfig: CracoConfig = {
   jest: {
@@ -1231,18 +1231,18 @@ export { cracoConfig as default };
 Now we can go ahead and test our component in the `Todo.spec.tsx` file as follows:
 
 ```tsx
-import { render, screen } from "@testing-library/react";
-import Todo from "./Todo";
+import { render, screen } from '@testing-library/react';
+import Todo from './Todo';
 
-describe("Todo", () => {
-  test("renders correctly", () => {
+describe('Todo', () => {
+  test('renders correctly', () => {
     render(<Todo />);
-    const ul = screen.getByRole("list");
+    const ul = screen.getByRole('list');
     expect(ul).toBeInTheDocument();
   });
-  test("renders a list of todos", async () => {
+  test('renders a list of todos', async () => {
     render(<Todo />);
-    const li = await screen.findAllByRole("listitem");
+    const li = await screen.findAllByRole('listitem');
     expect(li).toHaveLength(3);
   });
 });
@@ -1251,25 +1251,25 @@ describe("Todo", () => {
 Let's add another test case where we are going to handle an error. For that we are not going to modify our server, however we are going to make our handler from the `server` to throw an error. Which means we are going to use the `server.use()` method.
 
 ```tsx
-import { render, screen, waitFor } from "@testing-library/react";
-import Todo from "./Todo";
-import { server } from "../../mocks";
-import { http, HttpResponse } from "msw";
+import { render, screen, waitFor } from '@testing-library/react';
+import Todo from './Todo';
+import { server } from '../../mocks';
+import { http, HttpResponse } from 'msw';
 
-describe("Todo", () => {
-  test("renders correctly", () => {
+describe('Todo', () => {
+  test('renders correctly', () => {
     render(<Todo />);
-    const ul = screen.getByRole("list");
+    const ul = screen.getByRole('list');
     expect(ul).toBeInTheDocument();
   });
-  test("renders a list of todos", async () => {
+  test('renders a list of todos', async () => {
     render(<Todo />);
-    const li = await screen.findAllByRole("listitem");
+    const li = await screen.findAllByRole('listitem');
     expect(li).toHaveLength(3);
   });
-  test("renders error", async () => {
+  test('renders error', async () => {
     server.use(
-      http.get("https://jsonplaceholder.typicode.com/todos", (resolver) => {
+      http.get('https://jsonplaceholder.typicode.com/todos', (resolver) => {
         return HttpResponse.error();
       }),
     );
@@ -1277,7 +1277,7 @@ describe("Todo", () => {
     render(<Todo />);
     await waitFor(async () =>
       expect(
-        await screen.findByText("Failed to fetch todos."),
+        await screen.findByText('Failed to fetch todos.'),
       ).toBeInTheDocument(),
     );
   });
@@ -1288,7 +1288,7 @@ The code:
 
 ```tsx
 await waitFor(async () =>
-  expect(await screen.findByText("Failed to fetch todos.")).toBeInTheDocument(),
+  expect(await screen.findByText('Failed to fetch todos.')).toBeInTheDocument(),
 );
 ```
 
@@ -1394,24 +1394,41 @@ git commit -m "Keep calm and commit"
 
 ### lint-staged.
 
-```tsx
+This tool runs linters and formatters file that are at `git` staged. First we need to install the [`lint-staged`](https://github.com/lint-staged/lint-staged) as follows:
 
+```shell
+yarn add -D  lint-staged
 ```
 
-```tsx
+In the `package.json` we are going to add the `lint-staged` configuration as follows
 
+```json
+{
+  "lint-staged": {
+    "*.{ts,tsx}": ["eslint"],
+    "*.{ts,tsx,css, scss}": ["prettier --write"]
+  }
+}
 ```
 
-```tsx
+Now we can modify the scripts and add the following:
 
+```json
+{
+  "lint-staged": "npx lint-staged"
+}
 ```
 
-```tsx
+Now you can run
 
+```shell
+yarn lint-staged
 ```
 
-```tsx
+We can take a step futher and modify our `.husky/pre-commit` file and add the following
 
+```sh
+npx lint-staged
 ```
 
 ### Refs

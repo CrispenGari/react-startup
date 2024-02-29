@@ -25,7 +25,8 @@
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}'",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "npx lint-staged"
   },
   "eslintConfig": {
     "plugins": [
@@ -68,8 +69,18 @@
     "@craco/types": "^7.1.0",
     "eslint-plugin-jest-dom": "^5.1.0",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "msw": "^2.2.2",
+    "pinst": "^3.0.0",
     "prettier": "3.2.5",
     "undici": "^5.27.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{ts,tsx,css, scss}": [
+      "prettier --write"
+    ]
   }
 }
