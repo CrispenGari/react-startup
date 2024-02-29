@@ -10,7 +10,7 @@ const Todo: React.FC<Props> = () => {
       .then((res) => res.json())
       .then((data) => setTodo(data.map((todo: any) => todo.title)))
       .catch((err) => setError("Failed to fetch todos."));
-  });
+  }, []);
   return (
     <div className="todo">
       {error && <p>{error}</p>}

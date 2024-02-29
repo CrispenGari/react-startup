@@ -28,7 +28,7 @@ describe("List", () => {
     const btn = await screen.findByRole(
       "button",
       { name: "Login" },
-      { timeout: 1001 }
+      { timeout: 1001 },
     );
     logDOM(btn);
     expect(btn).toBeInTheDocument();

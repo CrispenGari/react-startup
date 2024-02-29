@@ -676,7 +676,7 @@ test("renders Hello button will eventually renders", async () => {
   const btn = await screen.findByRole(
     "button",
     { name: "Login" },
-    { timeout: 1001 }
+    { timeout: 1001 },
   );
   expect(btn).toBeInTheDocument();
 });
@@ -724,7 +724,7 @@ test("renders Hello button will eventually renders", async () => {
   const btn = await screen.findByRole(
     "button",
     { name: "Login" },
-    { timeout: 1001 }
+    { timeout: 1001 },
   );
   screen.debug();
   expect(btn).toBeInTheDocument();
@@ -934,7 +934,7 @@ const AllTheProviders = ({ children }: { children: React.ReactElement }) => {
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">
+  options?: Omit<RenderOptions, "wrapper">,
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
 export * from "@testing-library/react";
@@ -1077,7 +1077,7 @@ const Todo: React.FC<Props> = () => {
       .then((res) => res.json())
       .then((data) => setTodo(data.map((todo: any) => todo.title)))
       .catch((err) => setError("Failed to fetch todos."));
-  });
+  }, []);
   return (
     <div className="todo">
       {error && <p>{error}</p>}
@@ -1125,7 +1125,7 @@ export const handlers = [
           title: "Sleeping",
         },
       ],
-      { status: 200 }
+      { status: 200 },
     );
   }),
 ];
@@ -1248,13 +1248,151 @@ describe("Todo", () => {
 });
 ```
 
-```tsx
-
-```
+Let's add another test case where we are going to handle an error. For that we are not going to modify our server, however we are going to make our handler from the `server` to throw an error. Which means we are going to use the `server.use()` method.
 
 ```tsx
+import { render, screen, waitFor } from "@testing-library/react";
+import Todo from "./Todo";
+import { server } from "../../mocks";
+import { http, HttpResponse } from "msw";
 
+describe("Todo", () => {
+  test("renders correctly", () => {
+    render(<Todo />);
+    const ul = screen.getByRole("list");
+    expect(ul).toBeInTheDocument();
+  });
+  test("renders a list of todos", async () => {
+    render(<Todo />);
+    const li = await screen.findAllByRole("listitem");
+    expect(li).toHaveLength(3);
+  });
+  test("renders error", async () => {
+    server.use(
+      http.get("https://jsonplaceholder.typicode.com/todos", (resolver) => {
+        return HttpResponse.error();
+      }),
+    );
+
+    render(<Todo />);
+    await waitFor(async () =>
+      expect(
+        await screen.findByText("Failed to fetch todos."),
+      ).toBeInTheDocument(),
+    );
+  });
+});
 ```
+
+The code:
+
+```tsx
+await waitFor(async () =>
+  expect(await screen.findByText("Failed to fetch todos.")).toBeInTheDocument(),
+);
+```
+
+ensures that we are going to wait for the state to be updated in the component and then we will query the error text and assert if it does exists in the document.
+
+### Eslint
+
+This is a tool that we use to lint code to ensure consistence within our code, the idea is to make the code consistent and to avoid bugs. We are going to use the [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom) to lint our code. First of all we need to install it as follows:
+
+```shell
+yarn add -D eslint-plugin-jest-dom
+```
+
+Then we are going to open our `package.json` file and add the following to the `eslint` configuration:
+
+```json
+{
+  "eslintConfig": {
+    "plugins": ["jest-dom"],
+    "extends": ["react-app", "react-app/jest", "plugin:jest-dom/recommended"]
+  }
+}
+```
+
+And we are going to add the following `script` in our `scripts` in `package.json`:
+
+```json
+{
+  "scripts": { "lint": "eslint --ignore-path .gitignore ." }
+}
+```
+
+Now you can test for linting by running the command:
+
+```shell
+yarn lint
+```
+
+### Prettier
+
+This is a tool that is used to make sure that the code has been formatted according to the configurations for consistence. First we will need to install prettier by running the following command to start the configuration.
+
+```shell
+yarn add -D --exact prettier
+```
+
+Then after that we are going to add a script for formatting code with prettier called `format` as follows:
+
+```json
+{
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
+  }
+}
+```
+
+You can add a `.prettierrc.json` file and add some configurations. Here is an example:
+
+```json
+{
+  "semi": true,
+  "singleQuote": false
+}
+```
+
+Now you can run the format command as follows:
+
+```shell
+yarn format
+```
+
+Ref: https://prettier.io/docs/en/
+
+### Husky
+
+Husky is a tool that is used to improve commit of code and other things. We want to make sure that the code is linted and formatted before commits. We are going to do that using a tool called [`Husky`](https://typicode.github.io/husky/get-started.html)
+
+First we need to install it as follows:
+
+```shell
+yarn add --dev husky
+```
+
+Next we are going to run the command:
+
+```shell
+npx husky init && yarn
+# on npm
+npx husky init && npm
+```
+
+A folder called `.husky` will be generated with a `pre-commit` file. We are going to change this file so that it can contain the following code in it.
+
+```shell
+yarn lint && yarn format
+```
+
+Now when you start comitting your files those two commands will run.
+
+```shell
+git commit -m "Keep calm and commit"
+```
+
+### lint-staged.
 
 ```tsx
 

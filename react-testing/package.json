@@ -22,12 +22,19 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}'"
+    "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}'",
+    "lint": "eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
+    "prepare": "husky"
   },
   "eslintConfig": {
+    "plugins": [
+      "jest-dom"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jest-dom/recommended"
     ]
   },
   "browserslist": {
@@ -59,7 +66,10 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "@craco/types": "^7.1.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "husky": "^9.0.11",
     "msw": "^2.2.2",
+    "prettier": "3.2.5",
     "undici": "^5.27.0"
   }
 }

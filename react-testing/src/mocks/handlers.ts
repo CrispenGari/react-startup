@@ -14,7 +14,7 @@ const handlers = [
           title: "Sleeping",
         },
       ],
-      { status: 200 }
+      { status: 200 },
     );
   }),
 ];
