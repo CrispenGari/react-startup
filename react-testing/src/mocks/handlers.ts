@@ -1,6 +1,6 @@
 import { HttpResponse, http } from "msw";
 
-export const handlers = [
+const handlers = [
   http.get("https://jsonplaceholder.typicode.com/todos", (resolver) => {
     return HttpResponse.json(
       [
@@ -18,3 +18,5 @@ export const handlers = [
     );
   }),
 ];
+
+export default handlers;

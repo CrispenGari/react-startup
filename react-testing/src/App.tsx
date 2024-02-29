@@ -6,7 +6,7 @@ const App: React.FC<Props> = () => {
   return (
     <ThemeProvider theme="dark">
       <div className="App">
-        <h1>Hello from App</h1>
+        <h1>Hello from </h1>
       </div>
     </ThemeProvider>
   );

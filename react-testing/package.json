@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,10 +18,10 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}'"
   },
   "eslintConfig": {
@@ -42,6 +43,10 @@
     ]
   },
   "jest": {
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+[^esm]\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 80,
@@ -52,6 +57,9 @@
     }
   },
   "devDependencies": {
-    "msw": "^2.2.2"
+    "@craco/craco": "^7.1.0",
+    "@craco/types": "^7.1.0",
+    "msw": "^2.2.2",
+    "undici": "^5.27.0"
   }
 }

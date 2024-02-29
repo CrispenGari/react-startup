@@ -1152,10 +1152,100 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 ```
 
+We will need to create a file called `jest.polyfills.ts` and add the following to this file because we are using `mwc` version `2`:
+
+```ts
+import { TextDecoder, TextEncoder } from "node:util";
+// eslint-disable-next-line no-undef
+Object.defineProperties(globalThis, {
+  TextDecoder: { value: TextDecoder },
+  TextEncoder: { value: TextEncoder },
+});
+
+const { Blob, File } = require("node:buffer");
+const { fetch, Headers, FormData, Request, Response } = require("undici");
+// eslint-disable-next-line no-undef
+Object.defineProperties(globalThis, {
+  fetch: { value: fetch, writable: true },
+  Blob: { value: Blob },
+  File: { value: File },
+  Headers: { value: Headers },
+  FormData: { value: FormData },
+  Request: { value: Request },
+  Response: { value: Response },
+});
+```
+
+After doing this we will need to configure our `package.json` file and add the following to the `jest` config.
+
+```json
+{
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}'"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+[^esm]\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  }
+}
+```
+
+Next we will need to setup [`craco`](https://craco.js.org/docs/configuration/jest/). We are going to install it first as follows:
+
+```shell
+yarn add -D @craco/craco @craco/types
+```
+
+We are then going to create a `craco.config.ts` and add the following configuration:
+
+```ts
+import { CracoConfig } from "@craco/types";
+
+const cracoConfig: CracoConfig = {
+  jest: {
+    configure: (jestConfig, { env, paths, resolve, rootDir }) => {
+      jestConfig.setupFiles = [`${rootDir}/src/jest.polyfills.ts`];
+      return jestConfig;
+    },
+  },
+  typescript: { enableTypeChecking: true },
+};
+
+export { cracoConfig as default };
+```
+
 Now we can go ahead and test our component in the `Todo.spec.tsx` file as follows:
 
 ```tsx
+import { render, screen } from "@testing-library/react";
+import Todo from "./Todo";
 
+describe("Todo", () => {
+  test("renders correctly", () => {
+    render(<Todo />);
+    const ul = screen.getByRole("list");
+    expect(ul).toBeInTheDocument();
+  });
+  test("renders a list of todos", async () => {
+    render(<Todo />);
+    const li = await screen.findAllByRole("listitem");
+    expect(li).toHaveLength(3);
+  });
+});
 ```
 
 ```tsx
@@ -1189,3 +1279,5 @@ Now we can go ahead and test our component in the `Todo.spec.tsx` file as follow
 ### Refs
 
 1. [Jest-Dom](https://github.com/testing-library/jest-dom?tab=readme-ov-file#tohaveclass)
+2. [CRACO](https://craco.js.org/docs/getting-started/)
+3. [MSW](https://mswjs.io/docs/api/setup-server/)
