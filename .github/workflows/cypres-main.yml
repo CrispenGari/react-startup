@@ -1,4 +1,4 @@
-name: Cypress Tests with Dependency and Artifact Caching
+name: Cypress Testing
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
       - "react-testing/cypress-js/**"
 
 jobs:
-  cypress-run:
+  e2e:
     name: "E2E Testing"
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-        working-directory: ./react-testing/cypress-js
+        working-directory: ./react-testing/cypress-js/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,5 +25,27 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          build: yarn build
+          start: yarn start
+          component: false
+
+  component:
+    name: "Component Testing"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./react-testing/cypress-js/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: "Installing Dependencies"
+        run: yarn
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          component: true
+          build: yarn build
+          start: yarn start

@@ -477,6 +477,8 @@ describe("<App/>", () => {
 
 That is a quick example that shows how we can do `e2e` testing with `cypress`.
 
+### CI with Github workflows
+
 ```tsx
 
 ```
@@ -486,3 +488,5 @@ That is a quick example that shows how we can do `e2e` testing with `cypress`.
 1. [cypress](https://docs.cypress.io/guides/overview/why-cypress)
 2. [component-testing](https://docs.cypress.io/guides/component-testing/react/examples#Mounting-Components)
 3. [eslint](https://eslint.org/docs/latest/use/configure/configuration-files)
+4. [Github Actions](https://docs.cypress.io/guides/continuous-integration/github-actions)
+5. [cypress-io/github-action](https://github.com/cypress-io/github-action/tree/master)
