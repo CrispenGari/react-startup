@@ -1433,8 +1433,42 @@ npx lint-staged
 
 ### CI file with GitHub Actions
 
-```yml
+The following is a github action file that will run CI testing for our tests.
 
+```yml
+name: RTL Testing
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'react-testing/testing-library/**'
+
+jobs:
+  testing:
+    name: 'Component Testing'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./react-testing/testing-library/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 'Installing Dependencies'
+        run: yarn install
+
+      - name: 'Testing with RCL'
+        run: yarn test
 ```
 
 ### Refs
