@@ -1431,6 +1431,12 @@ We can take a step futher and modify our `.husky/pre-commit` file and add the fo
 npx lint-staged
 ```
 
+### CI file with GitHub Actions
+
+```yml
+
+```
+
 ### Refs
 
 1. [Jest-Dom](https://github.com/testing-library/jest-dom?tab=readme-ov-file#tohaveclass)
